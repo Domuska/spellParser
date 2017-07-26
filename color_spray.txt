@@ -1,0 +1,25 @@
+Color Spray
+
+Close-quarters spell
+
+Cyclic (cast once per battle OR at-will when the escalation die is even)
+
+Target: 1d4 nearby enemies in a group
+
+Attack: Intelligence + Level vs. MD
+
+Hit: 2d8 psychic damage, and if the target has 10 hp or fewer after the damage, it is weakened until the end of your next turn.
+
+3rd level spell: 4d6 damage, 20 hp or fewer.
+
+5th level spell: 6d8 damage, 30 hp or fewer.
+
+7th level spell: 10d6 damage, 40 hp or fewer.
+
+9th level spell: 10d12 damage, 60 hp or fewer.
+
+Adventurer Feat Increase the hit point threshold of the weakened effect by 5 hp.
+
+Champion Feat On a miss, the spell deals damage equal to your level.
+
+Epic Feat The spell now targets 1d4 + 1 nearby enemies in a group.
