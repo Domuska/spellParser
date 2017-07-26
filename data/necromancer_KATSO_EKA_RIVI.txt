@@ -1,0 +1,1112 @@
+KATSO SRD:STÄ SIVUA, SIELLÄ ON TAULUJA JA SHITTIÄ JOTKA KUSEE KAIKEN http://www.13thagesrd.com/classes/necromancer/#1st_Level_Spells
+
+1st Level Spells
+Channel Life
+
+Ranged spell
+
+Once per battle
+
+Attack Target: One random nearby creature other than the healing target
+
+Healing Target: One nearby ally
+
+Attack: Intelligence + Level vs. MD (make one attack only against the attack target)
+
+Hit vs. an enemy: 2d6 + Intelligence negative energy damage, and the healing target can heal using a recovery.
+
+Hit vs. an ally: 5 negative energy damage, and the healing target can heal using a recovery.
+
+Miss: The spell is not expended.
+
+3rd level spell: 5d6 damage vs. enemy, 10 damage vs. ally.
+
+5th level spell: 5d10 damage vs. enemy, 15 damage vs. ally.
+
+7th level spell: 7d10 damage vs. enemy, 20 damage vs. ally.
+
+9th level spell: 10d12 damage vs. enemy, 30 damage vs. ally.
+
+Adventurer Feat
+
+You can now cast this spell twice per battle.
+
+Champion Feat
+
+Staggered allies can no longer be an attack target of the spell.
+
+Epic Feat
+
+On a miss, the spell now deals half damage to the target, but there is still no effect on the healing target.
+
+Chant of Endings
+
+Ranged spell
+
+At-Will
+
+Target: The nearby enemy with the fewest hit points (you choose if there’s a tie; you also don’t have to be able to see that enemy)
+
+Attack: Intelligence + Level vs. MD
+
+Hit: 1d10 + Intelligence negative energy damage.
+
+3rd level spell: 4d6 damage.
+
+5th level spell: 6d6 damage.
+
+7th level spell: 6d10 damage.
+
+9th level spell: 8d10 damage.
+
+Adventurer Feat
+
+You can now choose whether or not you want to ignore mooks as targets when you cast the spell.
+
+Champion Feat
+
+Misses now deal damage equal to your level.
+
+Epic Feat
+
+While the escalation die is 4+, you can now target two nearby enemies with the fewest hit points with this spell.
+
+Command Undead
+
+Ranged spell
+
+Once per battle
+
+Target: One nearby undead creature with 64 hp or fewer
+
+Attack: Intelligence + Level vs. MD
+
+Hit: The target is confused (hard save ends, 16+).
+
+3rd level spell: Target with 96 hp or fewer.
+
+5th level spell: Target with 160 hp or fewer.
+
+7th level spell: Target with 266 hp or fewer.
+
+9th level spell: Target with 460 hp or fewer.
+
+Adventurer Feat
+
+A miss doesn’t expend the spell.
+
+Champion Feat
+
+If you wish, the target doesn’t make any attacks while confused. Instead it becomes compliant, answers short questions if possible, and follows other suggestions that don’t lead directly to damaging itself or other creatures. Basically, while confused it becomes a slightly puzzled friend, which may wonder why your other friends are hurting it while it’s trying to be helpful.
+
+Epic Feat
+
+The target now adds the escalation die to its attacks while confused by this spell.
+
+Death’s Gauntlet
+
+Ranged spell
+
+At-Will
+
+Target: One nearby creature
+
+Attack: Intelligence + Level vs. PD
+
+Hit: 1d4 + Intelligence modifier ongoing negative energy damage.
+
+Special: Instead of taking the ongoing damage at the end of its turn, the target can use its standard action to strike out at the skeletal limbs or spectral arms that are flailing at it. When it does, the ongoing damage ends and you can’t use death’s gauntlet again until the end of your next turn.
+
+Miss: Damage equal to your level.
+
+3rd level spell: 2d8 damage.
+
+5th level spell: 4d6 damage.
+
+7th level spell: 6d6 damage.
+
+9th level spell: 7d10 damage.
+
+Adventurer Feat
+
+When a target uses a standard action to end death’s gauntlet ongoing damage, it takes negative energy damage equal to your level.
+
+Champion Feat
+
+When you roll a natural even hit against a target with this spell, the ongoing negative energy damage has a hard save (16+).
+
+Epic Feat
+
+The spell can also target MD instead of PD.
+
+Summon Undead (1st level+)
+
+Ranged spell
+
+Daily
+
+Effect: You summon a mob of 1d3 + 1 crumbling skeleton mooks, as per the summoning rules. These skeletons fight for you until the end of the battle or until they drop to 0 hp, whichever comes first.
+
+As you cast the spell at higher levels, the mooks you summon vary, as shown below. The stats for each mob of mooks you can summon are also shown below.
+
+3rd level spell: 1d3 + 1 putrid zombie mooks.
+
+5th level spell: 1d3 + 1 starving ghoul mooks.
+
+7th level spell: 1d3 + 1 masterless vampire spawn mooks.
+
+9th level spell: 1d3 + 1 Blackamber skeletal warrior mooks.
+
+Champion Feat
+
+You now summon 1d4 + 1 mooks when you cast this spell instead of 1d3 + 1.
+
+Epic Feat
+
+If one or more mooks summoned by the spell survive the battle, you can keep one mook with you until the next battle. Or until someone in the party or the world gets sick of it and slays the thing.
+
+Crumbling Skeleton
+
+Normal
+1st level
+
+Mook
+
+Undead
+
+Initiative: +6
+Vulnerability: holy
+
+Sword +6 vs. AC—3 damage
+
+Resist weapons 16+: When a weapon attack targets this creature, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
+
+AC
+PD
+
+MD
+
+HP
+
+16
+14
+
+10
+
+6
+
+Putrid Zombie
+
+Normal
+3rd level
+
+Mook
+
+Undead
+
+Initiative: +2
+Vulnerability: holy
+
+Rotting fist +7 vs. AC—5 damage
+
+Natural 16+: Both the zombie and its target take 1d6 damage!
+
+Headshot: A critical hit against a putrid zombie deals triple damage instead of the normal double damage for a crit.
+
+AC
+PD
+
+MD
+
+HP
+
+18
+16
+
+12
+
+16
+
+Starving Ghoul
+
+Normal
+5th level
+
+Mook
+
+Undead
+
+Initiative: +8
+Vulnerability: holy
+
+Ripping claws +10 vs. AC—7 damage
+
+Natural 16+ The target is vulnerable (attacks vs. it have crit range expanded by 2) to attacks by undead until the end of the ghoul’s next turn.
+
+Pound of flesh: The starving ghoul’s ripping claws attack deals +5 damage against vulnerable targets.
+
+AC
+PD
+
+MD
+
+HP
+
+20
+18
+
+14
+
+18
+
+Masterless Vampire Spawn
+
+Normal
+7th level
+
+Mook
+
+Undead
+
+Initiative: +11
+Vulnerability: holy
+
+Claw +11 vs. AC—14 damage
+
+Natural even hit: The vampire spawn can make a fangs attack against the target as a free action.
+
+[Special trigger] Fangs +15 vs. AC—7 damage, and a humanoid target is weakened (–4 attack and defenses) until the end of the masterless vampire spawn’s next turn
+
+AC
+PD
+
+MD
+
+HP
+
+22
+19
+
+17
+
+24
+
+Blackamber Skeletal Warrior
+
+Normal
+9th level
+
+Mook
+
+Undead
+
+Initiative: +15
+Vulnerability: holy
+
+Shortsword +15 vs. AC—28 damage
+
+Natural 16+: Each Blackamber skeletal warrior in the battle moves up 1d4 points in initiative order.
+
+Natural even miss: 10 damage.
+
+R: Javelin +13 vs. AC—24 damage
+
+Press advantage: The warrior deals +1d10 damage with its attacks against enemies that have a lower initiative than it.
+
+Resist weapons 16+: When a weapon attack targets this creature, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
+
+AC
+PD
+
+MD
+
+HP
+
+26
+20
+
+22
+
+25
+
+Terror
+
+Ranged spell
+
+Daily
+
+Target: One nearby creature with 50 hp or fewer
+
+Attack: Intelligence + Level vs. MD
+
+Hit: The target uses all its actions during its turn to move away from the battle, disengaging from enemies to do so (hard save ends, 16+). If it fails to disengage with all of its actions, it won’t take opportunity attacks by moving. The effect also ends when you or one of your allies attacks the target.
+
+Miss: 1d10 + Intelligence psychic damage.
+
+3rd level spell: Target with 70 hp or fewer, 4d6 damage on a miss.
+
+5th level spell: Target with 100 hp or fewer, 6d6 damage on a miss.
+
+7th level spell: Target with 180 hp or fewer, 6d10 damage on a miss.
+
+9th level spell: Target with 300 hp or fewer, 8d10 damage on a miss.
+
+Adventurer Feat
+
+When you miss with this spell, you regain it after the battle.
+
+Champion Feat
+
+Increase the hit point threshold of targets by 50 hp.
+
+Epic Feat
+
+The target also takes the miss damage each time it fails a save against the effect.
+
+Unholy Blast
+
+Ranged spell
+
+Daily
+
+Target: One nearby enemy
+
+Attack: Intelligence + Level vs. PD
+
+Hit: 4d6 + Intelligence negative energy damage.
+
+First Miss: Half damage, and make the attack again against an enemy you haven’t already targeted with unholy blast this turn.
+
+Second Miss: Half damage, or full damage if the escalation die is 1+ and you choose to decrease it by 1.
+
+3rd level spell: 4d10 damage.
+
+5th level spell: 7d10 damage.
+
+7th level spell: 10d10 damage.
+
+9th level spell: 2d8 x 10 damage.
+
+Adventurer Feat
+
+The spell can now target far away enemies.
+
+Champion Feat
+
+The spell’s damage dice increase to d12s.
+
+Epic Feat
+
+The spell now targets two nearby enemies, but you can’t attack the same target twice as you work through the misses and hits.
+
+Zombie Form
+
+Ranged spell
+
+Daily
+
+Special: You can only cast this spell outside of battle; it requires 2d4 rounds to cast.
+
+Target: You or one willing nearby ally
+
+Effect: The target gains 30 temporary hit points that last until the end of the next battle. Until the end of the next battle, the target takes a –5 penalty to Charisma and Dexterity skill checks (no penalty to attacks), to disengage checks, and to initiative rolls.
+
+3rd level spell: 50 temporary hit points.
+
+5th level spell: 80 temporary hit points.
+
+7th level spell: 130 temporary hit points.
+
+9th level spell: 210 temporary hit points.
+
+3rd Level Spells
+The Bones Beneath
+
+Ranged spell
+
+Daily
+
+Target: One nearby mook (and hence, its mob)
+
+Attack: Intelligence + Level vs. PD
+
+Hit: 4d12 + Intelligence negative energy damage, and each mook in the mob that drops becomes a skeleton mook under your control until the end of the battle.
+
+Miss: Half damage, and each mook in the mob that drops becomes a skeleton mook under your control until the end of the battle.
+
+5th level spell: 7d12 damage.
+
+7th level spell: 2d6 x 10 damage.
+
+9th level spell: 2d10 x 10 damage.
+
+Special: The stats for the mooks created by each level of the bones beneath appear below. The level or physical nature of the mooks is irrelevant; the magic of the spell turns whatever creatures it’s forced to work with into skeletal mook allies with the stats below.
+
+The new mooks take their turn immediately after your turn.
+
+This isn’t a summoning spell, so the mooks created by this spell don’t count as summoned mooks.
+
+Just-ripped-free Skeleton Mook (3rd)
+
+Normal
+3rd level
+
+Mook
+
+Undead
+
+Initiative: +8
+Vulnerability: holy
+
+Sword or axe or whatever +8 vs. AC—5 damage
+
+Resist weapons 16+: When a weapon attack targets this creature, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
+
+AC
+PD
+
+MD
+
+HP
+
+18
+16
+
+12
+
+11
+
+Just-ripped-free Skeleton Mook (5th)
+
+Normal
+3rd level
+
+Mook
+
+Undead
+
+Initiative: +10
+Vulnerability: holy
+
+Sword or axe or whatever +10 vs. AC—8 damage
+
+Resist weapons 16+: When a weapon attack targets this creature, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
+
+AC
+PD
+
+MD
+
+HP
+
+20
+18
+
+14
+
+18
+
+Just-ripped-free Skeleton Mook (7th)
+
+Normal
+3rd level
+
+Mook
+
+Undead
+
+Initiative: +12
+Vulnerability: holy
+
+Sword or axe or whatever +12 vs. AC—16 damage
+
+Resist weapons 16+: When a weapon attack targets this creature, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
+
+AC
+PD
+
+MD
+
+HP
+
+22
+20
+
+16
+
+27
+
+Just-ripped-free Skeleton Mook (9th)
+
+Normal
+3rd level
+
+Mook
+
+Undead
+
+Initiative: +14
+Vulnerability: holy
+
+Sword or axe or whatever +14 vs. AC—28 damage
+
+Resist weapons 16+: When a weapon attack targets this creature, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
+
+AC
+PD
+
+MD
+
+HP
+
+24
+22
+
+18
+
+44
+
+Circle of Death
+
+Ranged spell
+
+Daily
+
+Special: You can’t cast this spell unless the escalation die is 3+.
+
+Target: Each nearby creature (allies and enemies)
+
+Attack: Intelligence + Level vs. PD
+
+Hit vs. an enemy: 5d12 + Intelligence negative energy damage.
+
+Hit vs. an ally: 1d6 negative energy damage.
+
+Miss vs. an enemy: Half damage.
+
+Miss vs. an ally: You take half the damage the ally would have taken on a hit.
+
+5th level spell: 8d12 damage to an enemy, 2d6 damage to an ally.
+
+7th level spell: 2d8 x 10 damage to an enemy, 3d8 damage to an ally.
+
+9th level spell: 4d6 x 10 damage to an enemy, 3d10 damage to an ally.
+
+Ghoul Form
+
+Ranged spell
+
+Daily
+
+Target: You or one willing nearby ally
+
+Effect: Until the end of the battle, the target gains a +4 melee attack bonus. In addition, enemies engaged with the target are vulnerable to its melee attacks.
+
+The target also only gains half the normal amount from healing effects, no matter the source.
+
+5th level spell: The target now also gains a +4 bonus to initiative, Dexterity checks, and disengage checks.
+
+7th level spell: Enemies engaged with the target are now vulnerable to all attacks.
+
+9th level spell: The target also rolls an icon relationship die with any necromantic icon, choosing whether the relationship is positive or negative.
+
+Negative Energy Shield
+
+Close-quarters spell
+
+Daily
+
+Target: You
+
+Effect: Until the end of the battle, when an enemy engaged with you attacks you with a natural odd attack roll, it takes 6d6 + Intelligence negative energy damage.
+
+5th level spell: 6d10 damage.
+
+7th level spell: 10d10 damage.
+
+9th level spell: 2d8 x 10 damage.
+
+Ray of Enfeeblement
+
+Ranged spell
+
+Daily
+
+Target: One nearby enemy with 96 hp or fewer
+
+Attack: Intelligence + Level vs. PD
+
+Hit: 4d12 + Intelligence negative energy damage, and the target is weakened (save ends)
+
+Miss: Half damage.
+
+5th level spell: 7d12 damage.
+
+7th level spell: 2d6 x 10 damage.
+
+9th level spell: 2d10 x 10 damage.
+
+Adventurer Feat
+
+The spell can now target an enemy with any number of hit points while the escalation die is 3+.
+
+Champion Feat
+
+The save against weakened is now a hard save (16+).
+
+Epic Feat
+
+On a miss, the target is also dazed (save ends).
+
+Speak with Dead
+
+Ranged spell
+
+Variable
+
+Special: You can use this spell 1d3 times each day (roll during a full heal-up when you take it). Each time you use the spell, you must wait 1d6 hours before casting it again.
+
+Target: One corpse you are touching that has been dead less than a day. Note that creatures that were undead for a longer period before they were killed are not legal targets.
+
+Effect: You can ask the corpse a number of yes/no questions that the leftover fragments of personality/spirit within the corpse will attempt to answer truthfully using the information it had when it died.* The magic uses the caster’s knowledge of language so no translation is needed. The first question is free. The second question requires a DC 15 necromancy skill check using Intelligence if the corpse is “friendly,” and Charisma if the corpse is not. Increase the DC by +5 for each subsequent question after the second. If you’re using this spell during battle, each question and answer requires a round.
+
+Note: Just as with the séance ability of the Death Priest talent, there’s always a 10% chance that the spirit summoned is going to lie to you for reasons best known to it and to the GM. The GM rolls a d20 secretly before the corpse provides any answers; a 3+ means the spirit will speak truly, but a 1 or a 2 means it will lie while appearing to be aiming for the truth.
+
+5th level spell: You can now cast this spell 1d4 times per day, targeting corpses or even just heads that have been dead up to a week.
+
+7th level spell: Questions can now be phrased to receive three-word answers, targeting corpses/heads that have been dead up to a month.
+
+9th level spell: Questions can now be phrased to receive one to two sentence answers, targeting corpses/heads or skeletal remains of almost any age.
+
+Summon Horror (3rd level+)
+
+Ranged spell
+
+Daily
+
+Effect: You summon a ghoul, as per the summoning rules. The summoned ghoul fights for you until the end of the battle or until it drops to 0 hp, whichever comes first.
+
+As you cast the spell at higher levels, the creature you summon varies, as shown below. The stats for each creature are shown below.
+
+5th level spell: You can now summon a wight.
+
+7th level spell: You can now summon a barrow wight.
+
+9th level spell: You can now summon a greater wight.
+
+Summoned Ghoul
+
+Normal
+3rd level
+
+Spoiler
+
+Undead
+
+Initiative: +8
+Vulnerability: holy
+
+Claws and bite +8 vs. AC—8 damage
+
+Natural even hit: The target is vulnerable (attacks vs. it have crit range expanded by 2) to attacks by undead until the end of the ghoul’s next turn.
+
+Pound of flesh: The ghoul’s claws and bite attack deals +4 damage against vulnerable targets.
+
+Infected bite: Any creature that is slain by a ghoul and not consumed will rise as a ghoul the next night.
+
+AC
+PD
+
+MD
+
+HP
+
+18
+16
+
+12
+
+20
+
+Summoned Wight
+
+Normal
+5th level
+
+Spoiler
+
+Undead
+
+Initiative: +8
+Vulnerability: holy
+
+Sword +10 vs. AC—14 damage
+
+Natural even hit or miss: Unless the wight is staggered, the attack also deals 8 ongoing negative energy damage.
+
+AC
+PD
+
+MD
+
+HP
+
+22
+18
+
+14
+
+32
+
+Summoned Barrow Wight
+
+Normal
+7th level
+
+Spoiler
+
+Undead
+
+Initiative: +10
+Vulnerability: holy
+
+Sword +12 vs. AC—21 damage
+
+Natural even hit or miss: Unless the barrow wight is staggered, the attack also deals 13 ongoing negative energy damage.
+
+AC
+PD
+
+MD
+
+HP
+
+24
+20
+
+16
+
+52
+
+Summoned Greater Wight
+
+Normal
+9th level
+
+Spoiler
+
+Undead
+
+Initiative: +12
+Vulnerability: holy
+
+Attack +14 vs AC—40 damage
+
+Natural even hit or miss: Unless the greater wight is staggered, the attack also deals 20 ongoing negative energy damage.
+
+AC
+PD
+
+MD
+
+HP
+
+26
+22
+
+18
+
+90
+
+Wave of Decay
+
+Ranged spell
+
+Daily
+
+Effect: Choose a nearby enemy. It takes 2d6 negative energy damage for each point on the escalation die. (For example, if the escalation die is 2 when you cast the spell, you’ll deal 4d6 negative energy damage to the target.)
+
+Until the end of the battle, as a free action at the start of each of your turns, repeat the effect above, choosing a target and dealing damage based on the escalation die value.
+
+The effect ends at the end of the battle, when you drop to 0 hp, or when your wave of decay damage drops an enemy to 0 hit points!
+
+5th level spell: 2d12 damage.
+
+7th level spell: 3d12 damage.
+
+9th level spell: 5d12 damage.
+
+Champion Feat
+
+The spell no longer ends when you drop to 0 hit points or below;instead it ends when you fail a death save.
+
+Epic Feat
+
+The spell no longer ends when you use it to drop an enemy to 0 hit points; it now ends when it drops a second enemy to 0 hit points.
+
+5th Level Spells
+Death’s Call
+
+Ranged spell
+
+Once per battle
+
+Quick action to cast
+
+Effect: Choose a creature you can see in the battle. If that creature is the next creature to drop to 0 hp, you heal using a recovery.
+
+7th level spell: When the creature drops, one of your nearby allies can heal using a recovery instead of you.
+
+9th level spell: If the chosen creature is not the next creature in the battle to drop to 0 hp, you still gain 30 temporary hit points.
+
+Champion Feat
+
+The recovery is now free.
+
+Epic Feat
+
+If your choice was wrong, you don’t expend the spell and can cast it later this battle. A second failed choice expends the spell.
+
+Rotting Curse
+
+Ranged spell
+
+Daily
+
+Target: One nearby enemy
+
+Attack: Intelligence + Level vs. PD
+
+Hit: 30 ongoing negative energy damage (hard save ends, 16+), and each time the target fails the save, the ongoing negative energy damage increases by 15
+
+Miss: 15 ongoing negative energy damage (hard save ends, 16+).
+
+7th level spell: 50 ongoing damage on a hit, with fail increments/miss damage of 25.
+
+9th level spell: 80 ongoing damage on a hit, with fail increments/miss damage of 40.
+
+Summon Wraith (5th level+)
+
+Ranged spell
+
+Daily
+
+Effect: You summon a wraith, as per the summoning rules. This wraith fights for you until the end of the battle or until it drops to 0 hp, whichever comes first.
+
+As you cast the spell at higher levels, you summon multiple wraiths. Stats for the two versions of the wraith summoned by the spell are listed below.
+
+7th level spell: You can now summon two wraiths.
+
+9th level spell: You can now summon two greater wraiths.
+
+Epic Feat
+
+When you cast summon wraith while the escalation die is 3+, you summon three wraiths or greater wraiths instead of two.
+
+Summoned Wraith
+
+Normal
+5th level
+
+Spoiler
+
+Undead
+
+Initiative: +10
+Vulnerability: holy
+
+Ice-cold ghost blade +10 vs. PD—14 negative energy damage
+
+Natural 16+: The target is also weakened until the end of its next turn.
+
+C: Spiraling assault +10 vs. PD (1d3 nearby enemies)—10 negative energy damage, and after the attack the wraith teleports to and engages with one target it hit
+
+Limited use: The wraith can use spiraling assault only when the escalation die is even.
+
+Flight: The wraith hovers and zooms about.
+
+
+Ghostly: This creature has resist damage 16+ to all damage (yes, even holy damage) except force damage, which damages it normally.
+
+A wraith can move through solid objects, but it can’t end its movement inside them.
+
+AC
+PD
+
+MD
+
+HP
+
+19
+14
+
+17
+
+33
+
+Summoned Greater Wraith
+
+Normal
+7th level
+
+Spoiler
+
+Undead
+
+Initiative: +12
+Vulnerability: holy
+
+Ice-cold ghost blade +12 vs. PD—20 negative energy damage
+
+Natural 16+: The target is also weakened until the end of its next turn.
+
+C: Spiraling assault +10 vs. PD (1d3 nearby enemies)—15 negative energy damage, and after the attack the wraith teleports to and engages with one target it hit
+
+Limited use: The wraith can use spiraling assault only when the escalation die is even.
+
+Flight: The wraith hovers and zooms about.
+
+
+Ghostly: This creature has resist damage 16+ to all damage (yes, even holy damage) except force damage, which damages it normally.
+
+A wraith can move through solid objects, but it can’t end its movement inside them.
+
+AC
+PD
+
+MD
+
+HP
+
+21
+16
+
+19
+
+47
+
+You Know What to Do
+
+Ranged spell
+
+Daily
+
+Target: One or more nearby enemies with 90 hp or fewer, up to a maximum number of targets equal to the escalation die
+
+Attack: Intelligence + Level vs. MD
+
+Hit: The target is confused (save ends). Instead of attacking an ally, the target attacks itself.
+
+Miss: Negative energy damage equal to your level.
+
+7th level spell: Targets with 160 hp or fewer.
+
+9th level spell: Targets with 260 hp or fewer.
+
+Champion Feat
+
+The crit range for attacks a confused target makes against itself expands by 4.
+
+Epic Feat
+
+Increase the hit point threshold of targets by 40 hp.
+
+7th Level Spells
+Cone of Corruption
+
+Ranged spell
+
+Daily
+
+Target: 1d3 nearby enemies in a group, and any of your allies engaged with those enemies
+
+Attack: Intelligence + Level vs. PD
+
+Hit: 10d10 + Intelligence negative energy damage.
+
+Natural even hit: As a hit, plus the target is hampered (save ends).
+
+Miss: Half damage.
+
+9th level spell: 2d8 x 10 damage.
+
+Feigned Defeat
+
+Close-quarters spell
+
+Daily
+
+Quick action to cast
+
+Effect: You lose 10d8 hit points that can’t be prevented in any way. At the start of your next turn, you heal using 3 free recoveries. If you are at 0 hp or below, or even dead, you return to life at 0 hp before healing.
+
+9th level spell: You lose 10d12 hit points.
+
+Ghost Form
+
+Ranged spell
+
+Daily
+
+Target: You
+
+Effect: Until the end of the battle, the target gains flight and resist damage 16+ against all damage except force damage.
+
+The target also only gains half the normal amount from healing effects, no matter the source.
+
+9th level spell: While in ghost form, you can move through solid objects, but you can’t end your movement inside them.
+
+Champion Feat
+
+You can now target a nearby willing ally with the spell instead of yourself.
+
+Epic Feat
+
+You can now target up to two nearby willing allies (including you).
+
+9th Level Spells
+Finger of Death
+
+Ranged spell
+
+Daily
+
+Target: One nearby enemy with 240 hp or fewer
+
+Attack: Intelligence + Level vs. MD
+
+Hit: The target drops to 0 hp and dies.
+
+Miss: You take 4d10 damage and regain finger of death after the battle.
+
+Epic Feat: You can now target an enemy with 320 hp or fewer.
+
+The Last of the Wine
+
+Ranged spell
+
+Daily
+
+Target: One or more nearby enemies, up to a maximum number of targets equal to the escalation die
+
+Special: After you cast this spell, you drop to 0 hit points and can’t use the escalation die any longer this battle. Nothing can prevent this change in hit points.
+
+Attack: Intelligence + Level vs. MD
+
+Hit: 3d6 x 10 negative energy damage.
+
+Miss: Half damage.
+
+Vampiric Form
+
+Ranged spell
+
+Daily
+
+Effect: Until the end of the battle, or until you drop to –40 hit points, you heal 6d10 + triple your Charisma modifier hit points at the start of each of your turns. In addition, as long as this spell is in effect, you can make the following attack as a free action against each nearby enemy that misses you with an attack with a natural roll of 1–5.
+
+Attack: Intelligence + Level vs. MD
+
+Natural Even Hit: The target is confused until the end of its next turn.
+
+Natural Odd Hit: The target is weakened until the end of its next turn.

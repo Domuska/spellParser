@@ -1,4 +1,9 @@
-import re
+import re, json
+
+#used for parsing spell data that is gotten from http://www.13thagesrd.com
+#usage: 
+#import parse_spell as p
+#p.parse_spell("color_spray.txt")
 
 def parse_spell(fileName):
 	with open(fileName) as f:
@@ -23,8 +28,37 @@ def parse_spell(fileName):
 			dict["attackType"] = "Ranged"
 			dict["rechargeTime"] = re.sub(r'.*;', '', lines[2])
 			
+			
+		if "Target" in line:
+			dict["target"] = removeMetaText(line)
+			
+		if line.startswith("Attack", 0, 6):
+			dict["attackRoll"] = removeMetaText(line)
+			
+		if line.startswith("Hit", 0, 3) or line.startswith("Effect", 0, 6):
+			dict["hitDamageOrEffect"] = removeMetaText(line)
+			
+		if line.startswith("Miss", 0, 4):
+			print("line starts with Miss: " + line)
+			dict["missDamage"] = removeMetaText(line)
+		
+		if line.startswith("3rd", 0, 3) or line.startswith("5th", 0, 3) or line.startswith("7th", 0, 3) or line.startswith("9th", 0, 3):
+			dict["hitDamageOrEffect"] = dict["hitDamageOrEffect"] + "\n" + line
+			
+		if "Special" in line or "Chain" in line or "Limited casting" in line:
+			if "notes" in dict:
+				dict["notes"] = dict["notes"] + "\n" + line
+			else:
+				dict["notes"] = line
 		i += 1
 		
 		
-		
+	print ("OUTPUT: \n")
 	print(dict)
+	with open("spells.txt", "a") as file:
+		file.write(json.dumps(dict))
+	
+def removeMetaText(text):
+	lineText = re.sub(r'.*:', '', text)
+	#remove first character since regex above leaves an empty space
+	return lineText[1:]

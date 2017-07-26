@@ -1,0 +1,84 @@
+1st Level Tactics
+Basic Tactical Strike
+
+Quick action Recharge 11+ after battle Target: One nearby ally Effect: The target can make a basic attack as a free action. Adventurer Feat On a hit, the attack gains a damage bonus equal to your Charisma modifier. Champion Feat The target gains an attack bonus equal to your Charisma modifier with that attack. Epic Feat The recharge roll is now 6+.
+Enforce Clarity
+
+Quick action Recharge 16+ after battle Target: One nearby ally Effect: One non-last gasp effect on the target ends (including effects that don’t require a save). Adventurer Feat The recharge roll is now 11+. Champion Feat You can now target one additional nearby ally with this tactic. Epic Feat The recharge roll is now 6+.
+Just Stay Calm
+
+Quick action, when the escalation die is 2+ Recharge 16+ after battle Effect: Decrease the escalation die by 1. Then 1d3 of your nearby allies can heal using a recovery. Adventurer Feat The tactic now affects 1d3 + 1 nearby allies. Champion Feat You can include yourself as one of the targets. Epic Feat When you use this tactic, you can spend an additional command point to avoid decreasing the escalation die.
+Outmaneuver
+
+Quick action, once per round Close-quarters attack At-Will Limited Use: You can only use this tactic when you have 0 command points. Target: The nearby enemy with the highest Mental Defense Attack: Charisma + Level vs. MD Hit: You gain 1 command point. Adventurer Feat When you are engaged with one or more enemies, you can target the enemy with the highest MD you are engaged with instead of the nearest enemy. Champion Feat When you attack with this tactic and roll a natural even hit, you gain 2 command points instead of 1. Epic Feat Once per battle as a free action when you hit with this tactic, the target also takes 1d10 psychic damage for each point on the escalation die.
+3rd Level Commands
+Charge!
+
+Interrupt action Cost: 1 command point Target: One nearby ally (on the ally’s turn) Effect: As a standard action this turn, the target can both move and make a basic attack. Adventurer Feat If you spend an additional command point, the target can use a melee attack instead of a basic attack. Champion Feat The target gains a bonus to the melee attack it makes from this command equal to your Charisma modifier. Epic Feat This turn, if the target moves to attack an enemy you are also engaged with, that enemy is vulnerable to the attack.
+Hit Harder
+
+Interrupt action Cost: 1 command point Target: One nearby ally who hits with an attack (on the ally’s turn) Effect: The target can reroll any of the damage dice. They must accept the rerolled result. Adventurer Feat The target gains a bonus to the damage roll equal to your Charisma modifier (double your Charisma modifier at 5th level; triple it at 8th level). Champion Feat You can spend an additional command point (1 max) to add another damage die of the same type to the damage roll when you reroll damage dice. (You only roll the extra damage die once.) Epic Feat You can also use this command as a free action (instead of as an interrupt action) when an ally hits with an opportunity attack.
+You Are A Precious Snowflake!
+
+Interrupt action Cost: 1 command point Target: One nearby non-human ally using a once-per-battle racial power (on the ally’s turn) Effect: Roll a d20. On a 11+, the target doesn’t expend the use of its racial power and can use it again later this battle.
+3rd Level Tactics
+Finish This!
+
+Quick action, when the escalation die is 4+ Recharge 16+ after battle Limited Use: You can only use this tactic when one enemy is left in the battle. Effect: You can spend between 1 and 3 command points. The crit range of your allies’ attacks against the remaining enemy expands by the number of command points you spent. This effect lasts until the end of the battle or until the enemy scores two critical hits. Adventurer Feat You can now use this tactic when the escalation die is 3+. Champion Feat You can now use this tactic when one or two enemies are left in the battle. Epic Feat You can now spend between 1 and 5 command points on the effect.
+Scramble
+
+Quick action Recharge 16+ after battle Targets: You and 1d3 nearby allies Effect: Each target can take a move action as a free action, starting with you and proceeding in the order of your choice. Adventurer Feat Disengage checks made using this free action gain a +5 bonus. Champion Feat The recharge roll is now 11+. Epic Feat Each target can also make a basic attack as a free action after taking the move action.
+Swordwork
+
+Free action, when the escalation die is 4+ Recharge 16+ after battle Effect: You can make a basic melee attack as a quick action once each turn until the end of the battle. You can’t gain command points from your Fight from the Front class feature using swordwork attacks. Adventurer Feat You can now use this tactic when the escalation die is 3+. Champion Feat You can now gain command points from your Fight from the Front class feature using swordwork attacks. Epic Feat The recharge roll is now 11+.
+5th Level Commands
+Hit ’Em From Here!
+
+Interrupt action Cost: 1 command point Target: One nearby ally (on the ally’s turn) Effect: This turn, the target ally can target one far away enemy with a power, spell, or attack that normally only targets or affects nearby enemies. Adventurer Feat You now gain 1d4 command points when you hit with a melee attack during your turn instead of 1d3. Champion Feat The target can now be a far away ally. Epic Feat The target ally’s power, spell, or attack can now target multiple far away creatures (if it can target multiple creatures normally).
+Strike Here!
+
+Interrupt action Cost: 4 command points Target: One ally engaged with an enemy you are engaged with (on the ally’s turn) Effect: The target can take an extra standard action this turn. Adventurer Feat You now gain 1d4 command points when you hit with a melee attack during your turn instead of 1d3. Champion Feat This command costs 3 command points instead of 4. Epic Feat If the extra standard action is an attack, the crit range of that attack expands by an amount equal to the escalation die.
+We’ve Got Your Back!
+
+Interrupt action Cost: 1 command point Target: One nearby confused, dazed, or weakened ally (at the start of the ally’s turn) Effect: Roll a d20. On a 11+, the target ignores the effects of one of those conditions (confused, dazed, weakened) this turn. On a 16+, the condition ends instead. Adventurer Feat You now gain 1d4 command points when you hit with a melee attack during your turn instead of 1d3. Champion Feat After the first time in a round you use this command as an interrupt action, you can use it as a free action until the start of your next turn if you have the command points for the cost. You can still only use the command once per ally’s turn. Epic Feat Add hampered and stunned to the list of conditions the effect includes.
+5th Level Tactics
+Advanced Tactical Strike
+
+Quick action Recharge 16+ after battle Target: One nearby ally Effect: The target can make an at-will attack as a free action. Champion Feat The first time you use this tactic each battle, make a recharge roll for it at the start of your next turn, adding the escalation die to the roll. The recharge roll after the battle, if any, doesn’t gain a bonus from the escalation die. Epic Feat The recharge roll is now 11+.
+Buck Up!
+
+Quick action Recharge 16+ after battle Targets: You and 1d4 nearby allies Effect: Each target gains temporary hit points equal to the average number of hit points it gains when it heals using a recovery. Champion Feat Add twice your Charisma modifier to the temporary hit points each target gains. Epic Feat One of the targets can also heal using a recovery.
+7th Level Commands
+Chain of Commands
+
+Free action Cost: 1 command point Target: You Effect: The next interrupt action you use to make a command doesn’t prevent you from using another interrupt action later in the round.
+You Know What to Do!
+
+Interrupt action Cost: 4 command points Target: One nearby ally (on that ally’s turn) Effect: The target can take an extra standard action this turn. Champion Feat This command costs 3 command points instead of 4. Epic Feat The target also gains temporary hit points equal to 3d10 + triple your Charisma modifier.
+7th Level Tactics
+Climactic Battle
+
+Quick action Recharge 16+ after battle Effect: Until the end of the battle, the escalation die becomes a d8 instead of a d6. Then roll a d20. If you roll 11+, increase the escalation die by 1. Champion Feat If the d20 roll is 16+, increase the escalation die by 2 instead of 1. Epic Feat When the escalation die reaches 8, you gain 1d6 command points and can make recharge rolls for all your tactics.
+On Your Feet, Maggots!
+
+Quick action Recharge 16+ after battle Targets: Up to two allies who are staggered or at 0 hit points or below. Effect: The target can heal using two recoveries but is dazed until the end of its next turn. Champion Feat If the escalation die is 3+, there is no dazed effect. Epic Feat This tactic now targets up to 1d4 + 1 allies.
+Saving Will
+
+Quick action Recharge 16+ after battle Target: One nearby ally Effect: The target gains a +5 bonus to all saves until the end of your next turn. Champion Feat This tactic can now be used as a free action. Epic Feat You can now target a far away ally.
+9th Level Commands
+Natural Command
+
+Interrupt action Cost: 2 command points Target: One nearby ally (on the ally’s turn) Effect: Count a natural odd roll the target rolls as natural even, or count a natural even roll the target rolls as natural odd (without actually changing the numerical result). Epic Feat This command costs 1 command point instead of 2 while the escalation die is 3+.
+You’ll Die When I Tell You to Die!
+
+Interrupt action Cost: Your remaining command points Target: One nearby ally about to roll a death save (on the ally’s turn) Effect: The target gains a +2 bonus to the death save for each command point spent on this command. Epic Feat If the target succeeds on its death save, it can take its turn normally as if it rolled a natural 20.
+9th Level Tactics
+Force a Conclusion
+
+Free action Recharge 16+ after battle Effect: If the escalation die is 2+, roll the escalation die and use the new result. Epic Feat You gain command points equal to the newly rolled escalation die value.
+Now, Not Later
+
+Free action Recharge 16+ after battle Target: One nearby ally using a recharge power Effect: The target can make a recharge roll for that power immediately after using the power. (If the recharge roll fails, the target can still make a recharge roll for it after the battle.) Epic Feat The target gains a bonus to the recharge roll equal to your Charisma modifier.
+Supreme Tactical Strike
+
+Quick action Recharge 16+ after battle Target: One nearby ally Effect: The target can make a standard action attack as a free action. Epic Feat If the attack hits, it’s a critical hit.

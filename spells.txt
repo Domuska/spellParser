@@ -1,0 +1,1 @@
+{"name": "Overcome Resistance", "attackType": "Ranged", "rechargeTime": " Recharge 16+ after battle", "target": "1d3 nearby allies (including yourself, if you wish)", "hitDamageOrEffect": "Until the end of the battle, the target ignores the resistance power of any creature it targets with an attack.\n9th level spell: You can now target 1d4 nearby allies with the spell."}
