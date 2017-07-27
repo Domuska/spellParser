@@ -164,7 +164,6 @@ Champion Feat You can choose to target either demons or undead with the spell (b
 Epic Feat Increase the targeting limit by 100 hp.
 
 $
-
 3rd Level Spells
 Cause Fear
 
@@ -289,9 +288,7 @@ Cast for broad Effect: Choose up to three nearby creatures (including you); each
 9th level spell: Power +6d10, Broad +3d10.
 
 $
-
 5th Level Spells
-
 Crisis of Faith
 
 Close-quarters spell
@@ -343,7 +340,6 @@ Miss: Half damage.
 9th level spell: 2d8 x 10 damage.
 
 $
-
 7th Level Spells
 Circle of Protection
 
@@ -360,7 +356,6 @@ Effect: Choose a defense: AC, PD, or MD. For the rest of the battle while you ar
 Epic Feat The spell is now (recharge 16+) after battle instead of daily.
 
 $
-
 9th Level Spells
 Overworld Travel
 
@@ -369,6 +364,8 @@ Close-quarters spell
 Daily
 
 Effect: You must cast this spell outdoors. It enables you and a group of nearby allies to travel to most any location in the world that you can name. Travel takes between an hour and a day, depending on distance and the amount of effort the exerted. The destination can be in the overworld or in the land. It can’t be in the underworld.
+
+$
 
 Prayer for Readiness
 

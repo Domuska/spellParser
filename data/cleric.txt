@@ -19,7 +19,7 @@ Cast for broad Effect: Choose up to three nearby creatures (including you); each
 
 9th level spell: Each target also gains 3d10 temporary hit points instead of 2d10 per point of the attack bonus.
 
-_
+$
 
 Cure Wounds
 
@@ -37,7 +37,7 @@ Effect: You or a nearby ally can heal using a free recovery.
 
 9th level spell: This spell is now recharge 11+ instead.
 
-_
+$
 
 Hammer of Faith
 
@@ -55,7 +55,7 @@ Effect: Until the end of the battle, your basic melee attacks use d12s as their 
 
 9th level spell: For the rest of the battle, change any of your basic melee attack damage dice rolls that are less than the escalation die to the escalation die value.
 
-_
+$
 
 Javelin of Faith
 
@@ -83,7 +83,7 @@ Champion Feat You can now target a far away enemy with the spell at a –2 attac
 
 Epic Feat If your natural attack roll is an 18+, make the attack a second time against a different target as a free action.
 
-_
+$
 
 Shield of Faith
 
@@ -105,7 +105,7 @@ Cast for broad Effect: Choose up to three nearby creatures (including you); each
 
 9th level spell: The bonus when cast for power increases to +4. The bonus when cast for broad effect increases to +2.
 
-_
+$
 
 Spirits of the Righteous
 
@@ -129,7 +129,7 @@ Miss: Your nearby ally with the fewest hit points gains a +2 bonus to AC until t
 
 Champion Feat You also gain the bonus to AC until the end of your next turn on a hit.
 
-_
+$
 
 Turn Undead
 
@@ -163,7 +163,7 @@ Champion Feat You can choose to target either demons or undead with the spell (b
 
 Epic Feat Increase the targeting limit by 100 hp.
 
-_
+$
 
 3rd Level Spells
 Cause Fear
@@ -184,7 +184,7 @@ Miss: The target hates you for having tried to scare it, and it wants to hurt yo
 
 9th level spell: Target with 300 hp or fewer.
 
-_
+$
 
 Combat Boon
 
@@ -204,7 +204,7 @@ Adventurer Feat If you score a critical hit with the combat boon attack, the sub
 
 Champion Feat One nearby conscious ally can roll a save even if your attack misses.
 
-_
+$
 
 Divine Endurance
 
@@ -224,7 +224,7 @@ Cast for broad Effect: Choose up to three nearby creatures (including you); each
 
 9th level spell: Temporary hp = 100/50.
 
-_
+$
 
 Judgment
 
@@ -248,7 +248,7 @@ Champion Feat The spell now deals half damage on a miss.
 
 Epic Feat The spell is now recharge 16+ after battle instead of daily.
 
-_
+$
 
 Mighty Healing
 
@@ -268,7 +268,7 @@ Cast for broad Effect: Choose up to three nearby creatures (including you); each
 
 Champion Feat This spell is now a close-quarters spell.
 
-_
+$
 
 Strength of the Gods
 
@@ -288,7 +288,7 @@ Cast for broad Effect: Choose up to three nearby creatures (including you); each
 
 9th level spell: Power +6d10, Broad +3d10.
 
-_
+$
 
 5th Level Spells
 
@@ -306,7 +306,7 @@ Effect: For the rest of this battle, all enemies near you with 100 hp or fewer t
 
 9th level spell: 250 hp or fewer.
 
-_
+$
 
 Sanctuary
 
@@ -320,7 +320,7 @@ Effect: Choose yourself or a nearby ally. Enemies with 100 hp or fewer cannot at
 
 9th level spell: 250 hp or fewer.
 
-_
+$
 
 Sphere of Radiance
 
@@ -342,7 +342,7 @@ Miss: Half damage.
 
 9th level spell: 2d8 x 10 damage.
 
-_
+$
 
 7th Level Spells
 Circle of Protection
@@ -359,7 +359,7 @@ Effect: Choose a defense: AC, PD, or MD. For the rest of the battle while you ar
 
 Epic Feat The spell is now (recharge 16+) after battle instead of daily.
 
-_
+$
 
 9th Level Spells
 Overworld Travel
