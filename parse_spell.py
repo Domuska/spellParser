@@ -1,4 +1,4 @@
-import re, json, uuid, unicodedata
+import re, json, uuid, unicodedata, os
 
 #used for parsing spell data that is gotten from http://www.13thagesrd.com
 #usage: 
@@ -6,6 +6,8 @@ import re, json, uuid, unicodedata
 #p.parse_spell("color_spray.txt")
 
 def convert_spells_to_json(fileName, targetFileName):
+	fileName = os.path.join("data", fileName)
+	print(fileName)
 	with open(fileName) as f:
 		lines = [line.rstrip('\n') for line in open(fileName)]
 	
@@ -109,7 +111,7 @@ def parse_spell(lines):
 			dict["missDamage"] = removeMetaText(line)
 		
 		#lines that are only in few places, such as with chain spells or charm person.
-		if line.startswith("Special", 0, 7) or line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7): 
+		if line.startswith("Special", 0, 7) or line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) or line.startswith("Always", 0, 6): 
 			line = cleanUnicodeFromString(line)
 			if "notes" in dict:
 				dict["notes"] = dict["notes"] + "\n" + line
@@ -133,11 +135,26 @@ def parse_spell(lines):
 			line = cleanUnicodeFromString(line)
 			line = re.sub(r'.*Epic Feat ', '', line)
 			dict["epicFeat"] = line
+			
+		if line.startswith("Quick action", 0, 12):
+			line = cleanUnicodeFromString(line)
+			dict["castingTime"] = line
+			
+		if line.startswith("Move action", 0, 11):
+			line = cleanUnicodeFromString(line)
+			dict["castingTime"] = line
+			
+		if line.startswith("Free action", 0, 11):
+			line = cleanUnicodeFromString(line)
+			dict["castingTime"] = line	
 				
 		#add spell group (level) that should be added at convert_spells_to_json
 		if line.startswith("spellLevel", 0, 10):
 			dict["groupName"] = removeMetaText(line)
 		i += 1
+		
+	if "castingTime" not in dict:
+		dict["castingTime"] = "Standard action to cast"
 		
 	return dict
 	

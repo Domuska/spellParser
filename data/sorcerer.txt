@@ -23,6 +23,8 @@ Miss: Half damage.
 
 Breath Weapon: For the rest of the battle, roll a d20 at the start of each of your turns. On a 16+, you can use breath of the white dragon that turn if you wish.
 
+$
+
 Burning Hands
 
 Close-quarters spell
@@ -49,6 +51,8 @@ Champion Feat When you roll a natural 18+ with a burning hands attack roll, you 
 
 Epic Feat You can now target each enemy engaged with you with your burning hands spell in addition to any other targets.
 
+$
+
 Chaos Bolt
 
 Ranged spell; At-Will
@@ -74,6 +78,8 @@ Miss: Damage equal to your level.
 Adventurer Feat You don’t take the –2 penalty for attacking a far away enemy with the spell.
 
 Champion Feat If you are a champion-tier sorcerer, roll any chaotic benefit gained with this spell on the epic chaotic benefits table. If you are an epic-tier sorcerer, choose the epic chaotic benefit you want instead of rolling.
+
+$
 
 Lightning Fork
 
@@ -103,6 +109,8 @@ Epic Feat The recharge roll for lightning fork is now 11+.
 
 Chain Spell: Each time you make a natural even attack roll, you can attack a different target with the spell.
 
+$
+
 Resist Energy
 
 Ranged spell; Recharge 16+ after battle
@@ -120,6 +128,8 @@ Effect: Until the end of the battle, the target gains resist damage 12+ to the f
 9th level spell: Recharge roll is now 11+.
 
 Adventurer Feat You can target an additional creature with the spell.
+
+$
 
 Scorching Ray
 
@@ -147,6 +157,7 @@ Champion Feat Each time you cast the spell, you can have the attack deal random 
 
 Epic Feat You don’t take the –2 penalty for attacking a far away enemy with the spell.
 
+$
 3rd Level Spells
 Breath of the Green
 
@@ -170,6 +181,8 @@ Miss: 5 ongoing poison damage.
 
 Breath Weapon: For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the green that turn if you wish.
 
+$
+
 Chaos Pulse
 
 Ranged spell; At-Will
@@ -190,6 +203,8 @@ Odd Miss: Damage equal to your level.
 
 9th level spell: 9d10 damage.
 
+$
+
 Dragon’s Leap
 
 Ranged spell; Daily
@@ -207,6 +222,8 @@ Effect: You can fly at the rate you normally move until the end of your turn. (S
 9th level spell: The spell is now recharge 16+ after battle instead of daily.
 
 Breath Weapon: For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use dragon’s leap this turn if you wish. (Yeah, we know it’s not actually a breath weapon, but it works as part of the draconic sorcerer package.)
+
+$
 
 Echoing Thunder
 
@@ -228,6 +245,7 @@ Miss: Damage equal to your level.
 
 Champion Feat The spell’s aftershock damage is now also doubled when echoing thunder is empowered.
 
+$
 5th Level Spells
 Breath of the Black
 
@@ -251,6 +269,8 @@ Epic Feat Double the spell’s ongoing damage on a miss.
 
 Breath Weapon: For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the black that turn if you wish.
 
+$
+
 The Elven Shadows
 
 Ranged spell; Daily
@@ -271,6 +291,8 @@ Miss: Damage equal to your level.
 
 Epic Feat Once per battle, the teleport from a hit with the elven shadows can be to a far away location you can see.
 
+$
+
 Three Dooms
 
 Ranged spell; Recharge 16+ after battle
@@ -289,6 +311,8 @@ Miss: Half damage, and you still take random energy damage equal to the unmodifi
 
 Chain Spell: Each time you make a natural even attack roll, you can attack a different target with the spell.
 
+$
+
 Unearthly Glamour
 
 Ranged spell; Daily
@@ -299,6 +323,7 @@ Effect: You gain a +5 bonus to all Charisma skill checks for the next five minut
 
 9th level spell: The effect lasts for 2 hours.
 
+$
 7th Level Spells
 Breath of the Blue
 
@@ -320,6 +345,8 @@ Epic Feat You can now target a far away enemy with the spell (no attack penalty)
 
 Breath Spell: For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the blue this turn if you wish.
 
+$
+
 Stolen Faces
 
 Ranged spell; Daily
@@ -328,39 +355,11 @@ Free action to cast, before initiative is rolled
 
 Targets: 1d4 + 1 nearby allies
 
-Effect: You steal the once-per-battle racial powers of your allies this battle, but you don’t get the advantage of your allies’ feats or items that improve those powers.
-
-Each ally you steal a racial power from can roll an easy save (6+). Success means they get to use their power also this battle. Failure means they can’t; you took it fully.
-
-You can’t steal racial powers you already possess.
+Effect: You steal the once-per-battle racial powers of your allies this battle, but you don’t get the advantage of your allies’ feats or items that improve those powers. Each ally you steal a racial power from can roll an easy save (6+). Success means they get to use their power also this battle. Failure means they can’t; you took it fully. You can’t steal racial powers you already possess.
 
 9th level spell: You get to use your allies’ powers as if you also had any of their feats that improve those powers.
 
-Touch of Evil
-
-Close-quarters spell
-
-Daily
-
-Quick action to cast
-
-Special: If you are fighting one or more demons, roll an easy save (6+) at the start of each of your turns. Failure means that you are confused that turn.
-
-Target: You
-
-Effect: You gain a random demon-style power for the rest of the battle, similar to the abilities demons possess but not identical.
-
-Roll a d8 to see which power you gain:
-
-Roll (d8)	Power	Description
-1	Resist energy 16+	When an attack that deals energy damage targets you, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.
-2	Infernal battery	Until the end of the battle, you can use a quick action once each round to make recharge rolls for your expended recharge spells. Each time you do so, you take damage equal to half the natural result of your recharge roll.
-3	Backlash	The first time you are staggered this battle, the enemy who staggered you becomes confused (save ends).
-4	Spell frenzy	You enter a spell frenzy (see Infernal Heritage talent). If you were already in a spell frenzy, you now roll 3d20 for each attack and take damage equal to triple the target’s level for each roll that misses.
-5	Fear aura	Enemies engaged with you that have fewer hit points than double your current hit points are dazed. They cannot use the escalation die.
-6	Teleport 1d3 + 1 times this battle	As a move action, you can teleport anywhere you can see nearby.
-7	Demonic speed	You can take an extra standard action each turn that the escalation die is even. You lose 2d10 hit points each time you use the extra action.
-8	Eye of the demon	Choose any two features you want. For the rest of this day, all your icon relationships disappear and are replaced by an identical number of conflicted points with a villainous icon (preferably one that is demonic).
+$
 9th Level Spells
 Breath of the Void
 
@@ -388,6 +387,8 @@ Effect: Randomly select an icon (preferably a sorcerous one). You gain some surp
 
 Epic Feat Randomly choose twice, then choose the single result you prefer.
 
+$
+
 Silver Flame
 
 Close-quarters spell
@@ -396,15 +397,5 @@ Daily
 
 Quick action to cast
 
-Effect: Roll your relationship dice that you have with a sorcerous heroic icon.
-
-For each 6 you roll, you gain one 7th level or lower spell from any spellcasting class that you can cast this battle. For each 5 you roll, you gain one 5th level or lower spell from any spellcasting class that you can cast this battle.
-
-If the escalation die is 5+, you can swap the escalation die for one or your rolls. If you get no successes, you regain the spell after this battle.
-
-You can acquire one of the new spells the same round you cast this spell. Then select and acquire any other gained spells at the start of your next turn.
-
-You can use your Charisma as the ability score that provides the acquired spells’ attack bonuses and damage bonuses (if any). Other ability score references remain unchanged.
-
-As you might expect, each 5 you roll also invokes an icon-related complication or obligation in the tradition of rolling 5s on relationship checks.
+Effect: Roll your relationship dice that you have with a sorcerous heroic icon. For each 6 you roll, you gain one 7th level or lower spell from any spellcasting class that you can cast this battle. For each 5 you roll, you gain one 5th level or lower spell from any spellcasting class that you can cast this battle. If the escalation die is 5+, you can swap the escalation die for one or your rolls. If you get no successes, you regain the spell after this battle. You can acquire one of the new spells the same round you cast this spell. Then select and acquire any other gained spells at the start of your next turn. You can use your Charisma as the ability score that provides the acquired spells’ attack bonuses and damage bonuses (if any). Other ability score references remain unchanged. As you might expect, each 5 you roll also invokes an icon-related complication or obligation in the tradition of rolling 5s on relationship checks.
 

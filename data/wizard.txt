@@ -1,121 +1,3 @@
-1st Level Utility: Disguise Self
-
-Close-quarters spell
-
-Daily
-
-Effect: This spell provides you with an effective magical disguise that lasts about ten minutes, making the skill check to avoid unmasking one step easier: easy if it would have been a normal task, normal if it would have been a hard task, and hard if it would have been a ridiculously hard task. The spell only affects your general appearance, not your size. It can be used to hide your features behind the generic features of another person or race. Using it to impersonate a specific creature makes it less effective as a disguise (-2 to -5 penalty).
-
-3rd level spell: The spell lasts for 1 hour.
-
-5th level spell: The spell also provides smell; +2 bonus to any checks.
-
-7th level spell: The spell also handles correct-sounding vocal patterns and rough mannerisms; +4 bonus to any checks.
-
-9th level spell: You can now target an ally with the spell; you can also now use it on up to two creatures at once.
-
-1st Level Utility: Feather Fall
-
-Close-quarters spell
-
-Daily
-
-Free action to cast
-
-Effect: When you cast this spell, it arrests your fall, letting you glide down the ground over a round or two.
-
-3rd level spell: You can now target a nearby ally with the spell.
-
-5th level spell: You can now target up to two nearby creatures with the spell.
-
-7th level spell: You can now target up to five nearby creatures with the spell.
-
-9th level spell: You gain some control over where a target falls, like a quickly gliding feather.
-
-1st Level Utility: Hold Portal
-
-Ranged spell; Daily
-
-Effect: You cast this spell on a door. For ten minutes, adventurer-tier creatures can’t get through the door. Champion-tier creatures can batter it down; each attempt requires a DC 20 Intelligence skill check (including an applicable background) by the caster to resist the battering and keep the spell going. Epic-tier creatures can walk right through.
-
-3rd level spell: The spell now lasts for an hour. Adventurer-tier creatures are stymied. Champion-tier creatures can batter the door down or destroy it after three failed DC 20 skill checks by the spellcaster. Epic creatures notice that the now-busted door had magic on it.
-
-5th level spell: Champion-tier creatures take a few minutes to force the door open. Epic creatures can force it open after one failed DC 25 skill check by the spellcaster.
-
-7th level spell: Champion-tier creatures are stymied for up to an hour by the door. Epic tier creatures get through after three failed DC 25 skill checks by the spellcaster.
-
-9th level spell: Champion-tier creatures can’t enter. Epic-tier creatures can’t get through for an hour.
-
-3rd Level Utility: Levitate
-
-Ranged spell; Daily
-
-Effect: Until the end of the battle, you can use a move action to rise straight up into the air or descend straight down. The spell itself won’t move you horizontally. The up-or-down movement is about half as fast as your normal movement. While levitating, you take a –2 penalty to your attacks and are vulnerable to attacks against you.
-
-5th level spell: You can now cast the spell on a nearby willing ally instead of yourself.
-
-7th level spell: You can now cast the spell as a quick action, and the spell can now affect two targets.
-
-9th level spell: The spell can now affect five targets.
-
-3rd Level Utility: Message
-
-Close-quarters spell
-
-Daily
-
-Quick action to cast
-
-Effect: You send a one to two sentence message to another person you know and have touched in the last week. Sending a message to a person you can see is always easy. Sending a message to a person you can’t see requires a skill check using Intelligence against the highest-tier environment that you or the sender are occupying.
-
-The maximum distance you can send a message depends on the spell’s level.
-
-3rd level spell: Across half a city, at most.
-
-5th level spell: Across the entire city and a bit into the countryside.
-
-7th level spell: Between cities near to each other.
-
-9th level spell: From any city to any other city, or across a sea.
-
-3rd Level Utility: Speak with Item
-
-Close-quarters spell
-
-Daily
-
-Quick action to cast
-
-Effect: Speak briefly, mind-to-mind, with a magic item you are touching that is owned by you or one of your allies. The item’s owner gets a free power recharge roll if that item’s power has been expended.
-
-5th level spell: You no longer need to be touching the item; it only has to be nearby.
-
-7th level spell: The item’s owner gains a +2 bonus to the item recharge roll.
-
-9th level spell: If the item recharge roll fails, you keep this spell, but the item won’t talk to you until after your next full heal-up.
-
-5th Level Utility: Water Breathing
-
-Close-quarters spell
-
-Daily
-
-Quick action to cast
-
-Effect: You can breathe underwater for the rest of the battle (or about five minutes). You become aware a couple of rounds ahead of when the magic of the spell is about to end.
-
-7th level spell: You and 1d4 + 2 nearby allies can breathe underwater this battle.
-
-9th level spell: The spell affects you and 1d6 + 2 nearby allies for 4d6 hours.
-
-7th Level Utility: Scrying
-
-Ranged spell; Daily
-
-Effect: You can use this spell to get information you shouldn’t be able to get, peering in on other people’s lives for a short period of time, usually no more than ten minutes at a time. Some areas may be warded at the GM’s discretion. You must have touched the person you wish to spy on in the last month, or, at 9th level, within the last a year.
-
-Scrying as a single standard action won’t yield much. Concentrating on the spell for a while with props like a scrying pool or a crystal ball will work better.
-
 1st Level Spells
 Acid Arrow
 
@@ -137,6 +19,8 @@ Miss: 5 ongoing acid damage, and you regain the spell during your next quick res
 
 9th level spell: 5d4 x 10 damage, and 40 ongoing damage; 40 ongoing on a miss.
 
+$
+
 Blur
 
 Ranged spell; Daily
@@ -152,6 +36,8 @@ Effect: For the rest of the battle (or for five minutes), attacks against the ta
 7th level spell: Miss 30% of the time, and you can now target 1d2 creatures with the spell.
 
 9th level spell: Miss 30% of the time, and you can now target two creatures with the spell.
+
+$
 
 Charm Person
 
@@ -174,6 +60,8 @@ Special: On a miss, the spell is not detectible by most others unless you miss b
 7th level spell: Target with 160 hp or fewer.
 
 9th level spell: Target with 266 hp or fewer.
+
+$
 
 Color Spray
 
@@ -201,6 +89,8 @@ Champion Feat On a miss, the spell deals damage equal to your level.
 
 Epic Feat The spell now targets 1d4 + 1 nearby enemies in a group.
 
+$
+
 Magic Missile
 
 Ranged spell; At-Will
@@ -224,6 +114,8 @@ Adventurer Feat You can choose two targets; roll half the damage dice for one mi
 Champion Feat Roll a d20 when you use the spell; if you roll a natural 20, the magic missile crits and deals double damage. (Rolling a 1 is not a fumble; this roll checks only to see if you can crit.)
 
 Epic Feat The 7th and 9th level versions of the spell now use d8s as damage dice.
+
+$
 
 Ray of Frost
 
@@ -251,6 +143,8 @@ Champion Feat The target of the spell can also be far away.
 
 Epic Feat When you cast the spell you can change the damage type to lightning or negative energy.
 
+$
+
 Shield
 
 Close-quarters spell
@@ -274,6 +168,8 @@ Adventurer Feat You can now choose either of the attack rolls, in case the secon
 Champion Feat Recharge roll after battle is now 6+.
 
 Epic Feat Hit or miss, you take only half damage from any attack you use shield against.
+
+$
 
 Shocking Grasp
 
@@ -303,6 +199,7 @@ Champion Feat Once per battle, when you hit the target of the spell, you can als
 
 Epic Feat The damage dice of the spell increase to d8s.
 
+$
 3rd Level Spells
 Confusion
 
@@ -328,6 +225,8 @@ Champion Feat Each failed save against the spell deals 6d10 psychic damage to th
 
 Epic Feat The save against confused is now a difficult save (16+).
 
+$
+
 Crescendo
 
 Close-quarters spell
@@ -349,6 +248,8 @@ Miss: Damage equal to your level.
 7th level spell: 7d10 damage.
 
 9th level spell: 10d12 damage.
+
+$
 
 Force Salvo
 
@@ -374,6 +275,8 @@ Champion Feat On a miss, a bolt now deals miss damage equal to your level.
 
 Epic Feat Increase the number of bolts by 1.
 
+$
+
 Hold Monster
 
 Ranged spell; Daily
@@ -397,6 +300,8 @@ Adventurer Feat If the spell misses all targets, you regain the spell during you
 Champion Feat The spell can target up to 2 nearby enemies whose total hit points don’t exceed the limit.
 
 Epic Feat Increase the limit by +50 hp.
+
+$
 
 Lightning Bolt
 
@@ -422,6 +327,8 @@ Champion Feat A natural even hit also deals 10 ongoing lightning damage.
 
 Epic Feat A natural even hit now deals 20 ongoing lightning damage (hard save ends, 16+).
 
+$
+
 Rebuke
 
 Ranged spell; Cyclic (once per battle OR at-will when the escalation die is even)
@@ -444,6 +351,8 @@ Champion Feat When you hit the target with the spell, you also daze it until the
 
 Epic Feat When you roll a natural even miss against the target, you daze it until the end of your next turn.
 
+$
+
 Sleep
 
 Ranged spell; Daily
@@ -461,6 +370,8 @@ Miss: The target is dazed until the end of your next turn.
 7th level spell: Targets 7d20 + 100 max hp.
 
 9th level spell: Targets 9d20 + 200 max hp.
+
+$
 
 Teleport Shield
 
@@ -484,6 +395,7 @@ Champion Feat When your teleport shield attack misses, the spell’s attack is n
 
 Epic Feat You can now teleport the enemy somewhere far away that you can see; other restrictions still apply.
 
+$
 5th Level Spells
 Denial
 
@@ -505,6 +417,8 @@ Champion Feat When you roll a natural even miss with the spell, the target is al
 
 Epic Feat Increase the number of targets to 1d4 + 1.
 
+$
+
 Dimension Door
 
 Close-quarters spell
@@ -521,6 +435,8 @@ Effect: You teleport somewhere nearby that you can see.
 
 9th level spell: You can take one ally who is next to you along with you as you teleport.
 
+$
+
 Fireball
 
 Ranged spell; Daily
@@ -533,9 +449,7 @@ Attack: Intelligence + Level vs. PD
 
 Hit: 10d10 fire damage.
 
-Miss: Half damage.
-
-Reckless miss: Your allies engaged with the target take one-fourth damage.
+Miss: Half damage. Reckless miss: Your allies engaged with the target take one-fourth damage.
 
 7th level spell 12d10 damage.
 
@@ -545,6 +459,8 @@ Champion Feat Casting the spell recklessly increases the number of additional ta
 
 Epic Feat Increase the number of targets to 1d3 + 1 instead of 1d3.
 
+$
+
 Invisibility
 
 Ranged spell; Daily
@@ -553,12 +469,13 @@ Target: You or one nearby ally
 
 Effect: Until the end of the battle (or for five minutes out of combat), the target becomes invisible until it attacks or uses some ridiculously flashy action.
 
-High Arcana: The duration out of combat is 1 hour instead.
+Special: High Arcana: The duration out of combat is 1 hour instead.
 
 7th level spell: You can now target 1d3 nearby allies (including you) with the spell.
 
 9th level spell: Creatures made invisible by the spell have a 25% chance of remaining invisible the first time (and first time only) they attack or get flashy.
 
+$
 7th Level Spells
 Blink
 
@@ -568,11 +485,11 @@ Daily
 
 Target: You or one nearby ally
 
-Effect: For the rest of the battle (or for five minutes), the target gains resist damage 16+. Enemies who can see invisible creatures ignore this resistance.
-
-Whenever the target uses a move action, there is a 50% chance that it can teleport somewhere nearby instead of physically moving.
+Effect: For the rest of the battle (or for five minutes), the target gains resist damage 16+. Enemies who can see invisible creatures ignore this resistance. Whenever the target uses a move action, there is a 50% chance that it can teleport somewhere nearby instead of physically moving.
 
 9th level spell: 75% chance.
+
+$
 
 Flight
 
@@ -584,17 +501,19 @@ Effect: The target can fly until the end of the battle (or for five minutes). Yo
 
 9th level spell: When you cast the spell, you can choose one: the effect lasts for an hour OR you can target 1d4 + 1 creatures for the normal duration.
 
+$
+
 Haste
 
 Ranged spell; Daily
 
 Target: You or one nearby ally
 
-Effect: On the target’s next turn (not this one, if you cast it on yourself), the target gains an additional standard action.
-
-In addition, at the start of each of the target’s turns this battle, if the escalation die is even, roll a d20 and add the escalation die; on a 16+, the target gains an additional standard action that turn.
+Effect: On the target’s next turn (not this one, if you cast it on yourself), the target gains an additional standard action. In addition, at the start of each of the target’s turns this battle, if the escalation die is even, roll a d20 and add the escalation die; on a 16+, the target gains an additional standard action that turn.
 
 9th level spell: The roll for additional standard actions is now 11+ instead of 16+.
+
+$
 
 Invisibility Purge
 
@@ -610,6 +529,8 @@ Miss: If there are one or more invisible creatures nearby, you become aware of t
 
 9th level spell: The spell also affects far away targets that you could normally see.
 
+$
+
 Overcome Resistance
 
 Ranged spell; Recharge 16+ after battle
@@ -619,6 +540,8 @@ Target: 1d3 nearby allies (including yourself, if you wish)
 Effect: Until the end of the battle, the target ignores the resistance power of any creature it targets with an attack.
 
 9th level spell: You can now target 1d4 nearby allies with the spell.
+
+$
 
 Transfer Enchantment
 
@@ -636,6 +559,7 @@ Miss: Half damage.
 
 9th level spell: 2d10 x 10 damage; if the spell misses, you regain it during your next quick rest.
 
+$
 9th Level Spells
 Disintegrate
 
@@ -645,29 +569,25 @@ Target: One nearby enemy
 
 Attack: Intelligence + Level vs. PD
 
-Hit: 4d8 x 10 damage, and the target is vulnerable (hard save ends, 16+).
-
-In addition, if the target drops to 0 hp from this attack, or drops to 0 hp before it saves against the vulnerable effect of this attack, it is gone, dusted, nothing remaining.
+Hit: 4d8 x 10 damage, and the target is vulnerable (hard save ends, 16+). In addition, if the target drops to 0 hp from this attack, or drops to 0 hp before it saves against the vulnerable effect of this attack, it is gone, dusted, nothing remaining.
 
 Miss: Half damage.
 
 Epic Feat You can now target a far away creature with the spell.
 
+$
+
 Meteor Swarm
 
 Ranged spell; Daily
 
-Special: You summon a meteor swarm. If you’re underground, you get the ur-dark stalactite equivalent! Nothing more happens this round, but roll 1d3 + 1 to determine how many meteors you have summoned.
-
-At the start of your next turn, even if you are unconscious or dead or have left the area, the meteors arrive one per turn at the start of each of your turns and slam into the combat area.
+Special: You summon a meteor swarm. If you’re underground, you get the ur-dark stalactite equivalent! Nothing more happens this round, but roll 1d3 + 1 to determine how many meteors you have summoned. At the start of your next turn, even if you are unconscious or dead or have left the area, the meteors arrive one per turn at the start of each of your turns and slam into the combat area.
 
 Target: You can make an attack with each meteor against 1d4 enemies in a group. Alternatively, use the spell to level an area with high impact property damage.
 
 Attack: Intelligence + Level vs. PD
 
-Hit: 4d4 x 10 damage of the energy type of your choice (cold, fire, lightning).
-
-Any allies engaged with the enemies you are targeting take one-fourth damage from each meteor that impacts the area.
+Hit: 4d4 x 10 damage of the energy type of your choice (cold, fire, lightning). Any allies engaged with the enemies you are targeting take one-fourth damage from each meteor that impacts the area.
 
 Miss: Half damage.
 
@@ -677,10 +597,6 @@ Teleport
 
 Ranged spell; Daily
 
-Effect: You and up to 4 allies next to you can teleport to any location in the world, underworld, or overworld that you have previously visited.
-
-When you teleport, roll a d20. If you roll a 1, you miss your desired location and arrive somewhere else altogether. Otherwise, you and your allies arrive at the desired location at the start of your next turn.
-
-Any effects of spells or items cast before teleporting are dispelled and no longer function on arrival.
+Effect: You and up to 4 allies next to you can teleport to any location in the world, underworld, or overworld that you have previously visited. When you teleport, roll a d20. If you roll a 1, you miss your desired location and arrive somewhere else altogether. Otherwise, you and your allies arrive at the desired location at the start of your next turn. Any effects of spells or items cast before teleporting are dispelled and no longer function on arrival.
 
 Epic Feat Your allies don’t need to be next to you before you cast the spell, just nearby. Alternately, if they are all next to you when you cast the spell, you can teleport to a location known to one of your allies.
