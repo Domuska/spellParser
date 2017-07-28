@@ -7,11 +7,6 @@ import re, json, uuid, unicodedata, os, sys, codecs
 
 def convert_spells_to_json(fileName, targetFileName):
 
-	#do silly things needed to get printing to work well on terminal
-	if sys.stdout.encoding != 'cp850':
-		sys.stdout = codecs.getwriter('cp850')(sys.stdout.buffer, 'strict')
-	if sys.stderr.encoding != 'cp850':
-		sys.stderr = codecs.getwriter('cp850')(sys.stderr.buffer, 'strict')
 		
 		
 	fileName = os.path.join("data", fileName)
