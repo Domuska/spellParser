@@ -1,4 +1,4 @@
-import re, json, uuid, unicodedata, os
+import re, json, uuid, unicodedata, os, sys, codecs
 
 #used for parsing spell data that is gotten from http://www.13thagesrd.com
 #usage: 
@@ -6,6 +6,14 @@ import re, json, uuid, unicodedata, os
 #p.parse_spell("color_spray.txt")
 
 def convert_spells_to_json(fileName, targetFileName):
+
+	#do silly things needed to get printing to work well on terminal
+	if sys.stdout.encoding != 'cp850':
+		sys.stdout = codecs.getwriter('cp850')(sys.stdout.buffer, 'strict')
+	if sys.stderr.encoding != 'cp850':
+		sys.stderr = codecs.getwriter('cp850')(sys.stderr.buffer, 'strict')
+		
+		
 	fileName = os.path.join("data", fileName)
 	print(fileName)
 	with open(fileName) as f:
@@ -17,12 +25,13 @@ def convert_spells_to_json(fileName, targetFileName):
 	spell = []
 	for line in lines:
 		if '$' in line:
-			print("$ found, spell ended")
+			#print("$ found, spell ended")
 			spell.append("spellLevel: " + str(spellLevel))
 			allSpells.append(spell)
 			spell = []
-		elif "Level Spells" in line:
+		elif "Level Spells" in line or "Level Battle Cries" in line or "Level Songs" in line:
 			spellLevel = line
+			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
 			spell.append("")
 		else:
@@ -66,6 +75,7 @@ def parse_spell(lines):
 	dict = {}
 	#set name first
 	dict["name"] = lines[1]
+	uprint(dict['name'])
 	
 	i = 1
 	for line in lines:
@@ -92,8 +102,8 @@ def parse_spell(lines):
 			dict["attackRoll"] = removeMetaText(line)
 		
 		#handle hit or effect portion, they go to same field. Clerics can have Cast for Power or Cast for Broad Effect, those in here too
-		if line.startswith("Hit", 0, 3) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8):
-			print(line)
+		if line.startswith("Hit", 0, 3) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) or line.startswith("Opening & Sustained", 0, 19):
+			#print(line)
 			line = cleanUnicodeFromString(line)
 			if "hitDamageOrEffect" in dict:
 				dict["hitDamageOrEffect"] = dict["hitDamageOrEffect"] + "\n" + line
@@ -103,11 +113,12 @@ def parse_spell(lines):
 		#add higher level effects to the effect field as well
 		if line.startswith("3rd", 0, 3) or line.startswith("5th", 0, 3) or line.startswith("7th", 0, 3) or line.startswith("9th", 0, 3):
 			line = cleanUnicodeFromString(line)
+			print("\n" + line)
 			dict["hitDamageOrEffect"] = dict["hitDamageOrEffect"] + "\n" + line
 		
 		if line.startswith("Miss", 0, 4):
 			line = cleanUnicodeFromString(line)
-			print("line starts with Miss: " + line)
+			uprint("line starts with Miss: " + line)
 			dict["missDamage"] = removeMetaText(line)
 		
 		#lines that are only in few places, such as with chain spells or charm person.
@@ -167,7 +178,7 @@ def removeMetaText(text):
 def cleanUnicodeFromString(text):
 	#text.replace("\u00e2\u20ac\u2122", "AAAAAAA")
 	#text.decode('unicode_escape').encode('ascii', 'ignore')
-	print (text)
+	#print (text)
 	if "\u00e2\u20ac\u02dc" in text:
 		text = text.replace("\u00e2\u20ac\u02dc", "'")
 	if "\u00e2\u20ac\u2122" in text:
@@ -175,3 +186,11 @@ def cleanUnicodeFromString(text):
 	if "\u00e2\u20ac\u201c" in text:
 		text = text.replace("\u00e2\u20ac\u201c", "-")
 	return text
+
+def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
+    enc = file.encoding
+    if enc == 'UTF-8':
+        print(*objects, sep=sep, end=end, file=file)
+    else:
+        f = lambda obj: str(obj).encode(enc, errors='backslashreplace').decode(enc)
+        print(*map(f, objects), sep=sep, end=end, file=file)

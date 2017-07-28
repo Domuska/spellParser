@@ -5,15 +5,15 @@ Flexible melee attack
 
 Triggering Roll: Natural even roll
 
-Effect: Choose either
+Effect: Choose either: One of your unengaged allies can move as a free action. One of your engaged allies can make a disengage check as a free action.
 
-One of your unengaged allies can move as a free action
-One of your engaged allies can make a disengage check as a free action.
 Adventurer Feat The disengage check gains a +2 bonus.
 
 Champion Feat The bonus increases to +5.
 
 Epic Feat An engaged ally you target with this battle cry can pop free from one enemy as a free action before making the disengage check.
+
+$
 
 Pull It Together!
 
@@ -29,6 +29,8 @@ Champion Feat The attack can now also trigger on any natural even roll; the extr
 
 Epic Feat You can use pull it together three times per battle; the extra healing is now +1d10 per point.
 
+$
+
 Stay Strong!
 
 Flexible melee attack
@@ -42,6 +44,8 @@ Adventurer Feat Bonus also applies to PD.
 Champion Feat Bonus also applies to MD.
 
 Epic Feat Bonus increases to +4.
+
+$
 
 We Need You!
 
@@ -57,6 +61,7 @@ Champion Feat The bonus increases to +2.
 
 Epic Feat If the escalation die is 3+, two nearby conscious allies (instead of one) can each roll a save (with bonuses).
 
+$
 1st Level Songs
 Song of Heroes
 
@@ -78,6 +83,8 @@ Final Verse: The effect ends immediately, but one ally of your choice gains a +2
 
 9th level song: The effect also provides a +1 bonus to Mental Defense.
 
+$
+
 Song of Spilt Blood
 
 Bardic song
@@ -97,6 +104,8 @@ Final Verse: The effect ends immediately, and you or one ally of your choice can
 7th level song: Add +10 hp to the recovery.
 
 9th level song: Add +15 hp to the recovery.
+
+$
 
 1st Level Spells
 Battle Chant
@@ -125,6 +134,8 @@ Champion Feat Once per day, you can expend one of your recoveries to reroll a ba
 
 Epic Feat One battle per day, your battle chant damage dice become d10s.
 
+$
+
 Befuddle
 
 Ranged spell; Recharge 11+ after battle
@@ -151,6 +162,8 @@ Champion Feat The target of the spell doesn’t have to be nearby, just in line 
 
 Epic Feat On a hit, the confusion effect is now save ends.
 
+$
+
 Charm Person
 
 Ranged spell; Daily
@@ -172,6 +185,8 @@ Special: On a miss, the spell is not detectible by most others unless you miss b
 7th level spell: Target with 160 hp or fewer.
 
 9th level spell: Target with 266 hp or fewer.
+
+$
 
 Soundburst
 
@@ -199,6 +214,7 @@ Champion Feat The spell is now recharge 16+ after battle instead of daily.
 
 Epic Feat You can now target 1d4 + 1 enemies in a group with the spell.
 
+$
 3rd Level Battle Cries
 Hang Tough!
 
@@ -214,6 +230,8 @@ Champion Feat Add your level to the temporary hit points given (add before any d
 
 Epic Feat You can choose yourself instead of an ally as the target of the battle cry.
 
+$
+
 It’s All Yours!
 
 Flexible melee attack
@@ -228,6 +246,8 @@ Champion Feat The damage bonus increases to +3d6.
 
 Epic Feat The damage bonus increases to +3d12.
 
+$
+
 Take Heart!
 
 Flexible melee attack
@@ -236,6 +256,7 @@ Triggering Roll: Any hit
 
 Effect: Choose a nearby ally. That ally can either roll a save against a save ends effect or roll a normal save against a condition that has a duration that lasts until the end or beginning of a turn.
 
+$
 3rd Level Songs
 Song of Aid
 
@@ -254,6 +275,8 @@ Final Verse: One target that gained temporary hit points can also heal using a r
 7th level song: 7d6 temporary hit points, and the recovery from the final verse is free.
 
 9th level song: 9d8 temporary hit points; sustain the song on a 7+.
+
+$
 
 Song of Thunder
 
@@ -283,6 +306,7 @@ Champion Feat The number of targets increases to 2d4.
 
 Epic Feat Two of the targets can now be far away instead of nearby.
 
+$
 3rd Level Spells
 Vicious Mockery
 
@@ -308,6 +332,8 @@ Champion Feat Recharge check is now 6+.
 
 Epic Feat A natural even miss does not expend the spell.
 
+$
+
 Wild Heal
 
 Ranged spell; Daily
@@ -328,6 +354,7 @@ Champion Feat Add a third random target.
 
 Epic Feat The recoveries the targets use are now free.
 
+$
 5th Level Battle Cries
 Stay True!
 
@@ -349,6 +376,7 @@ Champion Feat The battle cry can now trigger when the escalation die is 3+ inste
 
 Epic Feat The damage bonus is now +3d12.
 
+$
 5th Level Songs
 Song of Magic
 
@@ -366,6 +394,7 @@ Final Verse: All spells you and your allies cast before the start of your next t
 
 9th level song: Rolls to retain expended spells gain a bonus equal to the escalation die.
 
+$
 5th Level Spells
 Arrow of Verse
 
@@ -387,6 +416,8 @@ Champion Feat Recharge check is now 11+.
 
 Epic Feat Bonus dice and miss dice are now d12s.
 
+$
+
 Discombobulate
 
 Ranged spell; Daily
@@ -403,6 +434,7 @@ Miss: The target is dazed until the end of your next turn.
 
 9th level spell: Target with 240 hp or fewer.
 
+$
 7th Level Battle Cries
 They Fall Before Us!
 
@@ -416,6 +448,7 @@ Effect: A nearby ally can make a basic attack as a free action.
 
 Epic Feat The battle cry can now trigger on a natural 19+.
 
+$
 7th Level Songs
 Song of Blood & Legends
 
@@ -431,6 +464,8 @@ Final Verse: One nearby ally can make a basic attack as a free action and heal u
 
 9th level song: The recovery granted by the final verse attack is free.
 
+$
+
 Song of Victory
 
 Bardic song
@@ -445,6 +480,7 @@ Final Verse: Each nearby enemy takes 5d6 + Charisma psychic damage.
 
 9th level song: 7d6 damage.
 
+$
 7th Level Spells
 The Overworld Two-Step
 
@@ -460,6 +496,7 @@ Champion Feat Recharge check is now 11+.
 
 Epic Feat You can now also swap the positions of far-away allies you can see, up to a maximum of 9 creatures.
 
+$
 9th Level Battle Cries
 The Time Is Now!
 
@@ -471,6 +508,7 @@ Effect: Choose one nearby ally. That ally can expend a recovery to regain a dail
 
 Epic Feat The battle cry can now trigger on natural 18+.
 
+$
 9th Level Songs
 Song of Destinies
 
@@ -484,6 +522,7 @@ Opening & Sustained Effect: Later this turn, you can add 1 to the natural result
 
 Final Verse: The GM chooses an icon relevant to the situation; you choose the PC who will make an icon relationship check. That player makes the check and joins the GM in a duet of improvisation as to how the icon relationship roll has some impact on the current battle.
 
+$
 9th Level Spells
 Inspire Legends
 
