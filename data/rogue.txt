@@ -19,6 +19,8 @@ Champion Feat If you hit with evasive strike and the natural attack roll was eve
 
 Epic Feat Ok. Thanks to your slippery mind, the champion feat benefit also provides a +2 bonus to MD.
 
+$
+
 Deadly Thrust
 
 Melee attack
@@ -38,6 +40,8 @@ Adventurer Feat Add your Strength modifier to the miss damage.
 Champion Feat You can now target mooks with deadly thrust.
 
 Epic Feat If you don’t add your Sneak Attack damage to the attack, you also deal damage equal to five times your Strength modifier to your deadly thrust target when you hit.
+
+$
 
 Flying Blade
 
@@ -61,6 +65,8 @@ Champion Feat As long as one of your allies is engaged with the target, your fly
 
 Epic Feat You can use flying blade with any ranged weapon.
 
+$
+
 Roll With It
 
 Momentum power
@@ -78,6 +84,8 @@ Adventurer Feat The power also triggers on an attack against PD.
 Champion Feat The power also triggers on a ranged attack.
 
 Epic Feat Once per day, you can use roll with it to take damage equal to the attacker’s level instead of half damage.
+
+$
 
 Sure Cut
 
@@ -97,6 +105,8 @@ Miss: Deal your Sneak Attack damage + damage equal to your level.
 
 Champion Feat Missing with sure cut no longer counts as a use of Sneak Attack for the round.
 
+$
+
 Tumbling Strike
 
 Melee attack
@@ -111,6 +121,7 @@ Hit: WEAPON + Dexterity damage.
 
 Miss: Damage equal to your level.
 
+$
 3rd Level Powers
 Bleeding Strike
 
@@ -132,6 +143,8 @@ Champion Feat A natural even miss also deals ongoing damage equal to your level.
 
 Epic Feat You can now use bleeding strike against enemies taking ongoing damage.
 
+$
+
 Deflection
 
 Momentum power
@@ -150,6 +163,8 @@ Champion Feat The deflected attack now deals full damage instead of half damage.
 
 Epic Feat Using deflection no longer spends your momentum.
 
+$
+
 Slick Feint
 
 Melee attack
@@ -158,19 +173,21 @@ At-Will
 
 First Target: One enemy engaged with you
 
-Attack: Charisma + Level vs. MD
+Attack (First target): Charisma + Level vs. MD
 
-Hit: The target is dazed until the end of your next turn, and you can make an improved attack against a second target.
+Hit (First target): The target is dazed until the end of your next turn, and you can make an improved attack against a second target.
 
-Miss (First Target): Your attack action is over; the feint was a screw-up.
+Miss (First Target): Your attack action is over; the feint was a screw-up. 
 
 Second Target: A different enemy from the first target that is engaged with you
 
-Attack: Dexterity + Level +2 vs. AC
+Attack (Second target): Dexterity + Level +2 vs. AC
 
-Hit: WEAPON + Dexterity damage.
+Hit (Second target): WEAPON + Dexterity damage.
 
 Miss (Second Target): Damage equal to your level.
+
+$
 
 Thief’s Strike
 
@@ -188,6 +205,7 @@ Hit: Half of WEAPON + Dexterity damage (including Sneak Attack damage if any), a
 
 Miss: —
 
+$
 5th Level Powers
 Harmless Misdirection
 
@@ -201,6 +219,8 @@ Trigger: You miss with a melee attack while an ally is engaged with the target.
 
 Effect: You can pop free from the target, and the target can’t attack you during its next turn as long as your ally remains engaged with it.
 
+$
+
 Spiky Bastard
 
 Daily
@@ -212,6 +232,8 @@ Effect: You go all-out to hurt anyone who tries to get a piece of you. For the r
 Champion Feat Spiky bastard damage now applies when you are staggered, though obviously not while you are unconscious.
 
 Epic Feat If the escalation die is 3+, the damage increases to 15 instead of 10.
+
+$
 
 Swift Dodge
 
@@ -229,6 +251,7 @@ Champion Feat The power also triggers on an attack against PD.
 
 Epic Feat The attack reroll takes a –2 penalty.
 
+$
 7th Level Powers
 Assassin’s Gambit
 
@@ -245,6 +268,8 @@ Hit: Half of WEAPON + Dexterity damage (including Sneak Attack damage if any), a
 Miss: Damage equal to your level.
 
 Epic Feat Once a turn, you can get the extra standard action when this attack drops a mook target.
+
+$
 
 Swift Riposte
 
@@ -264,6 +289,7 @@ Champion Feat If your swift riposte attack is a critical hit, the enemy’s atta
 
 Epic Feat You gain a +2 attack bonus with swift riposte attacks.
 
+$
 9th Level Powers
 Death’s Twin
 
@@ -277,6 +303,8 @@ Effect: You can make two basic attacks at any point during your turn, each again
 
 Epic Feat If your attack against your first death’s twin target is a natural 18+, you can make your second basic attack against that same target.
 
+$
+
 True Targeting
 
 Momentum power
@@ -287,6 +315,4 @@ Interrupt action OR free action on your turn; you must spend your momentum
 
 Trigger: An invisible or otherwise hidden enemy attacks you, or you try to attack an invisible or hidden enemy.
 
-Effect: The attacker’s invisibility isn’t going to work on you. It might work against your allies, but you see through it and can tell where the creature is well enough to target it normally or be aware of its imminent attack.
-
-If the enemy’s attack misses, you regain momentum.
+Effect: The attacker’s invisibility isn’t going to work on you. It might work against your allies, but you see through it and can tell where the creature is well enough to target it normally or be aware of its imminent attack. If the enemy’s attack misses, you regain momentum.

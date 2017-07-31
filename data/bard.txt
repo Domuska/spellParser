@@ -106,7 +106,6 @@ Final Verse: The effect ends immediately, and you or one ally of your choice can
 9th level song: Add +15 hp to the recovery.
 
 $
-
 1st Level Spells
 Battle Chant
 
@@ -363,6 +362,8 @@ Flexible melee attack
 Triggering Roll: Natural 16+ if the escalation die is 3+; otherwise natural 20
 
 Effect: A nearby ally regains the use of a once-per-battle racial ability that was expended this battle.
+
+$
 
 Victory Is Ours!
 

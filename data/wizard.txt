@@ -377,7 +377,7 @@ Teleport Shield
 
 Close-quarters spell
 
-Daily
+Daily (see notes)
 
 Always: For the rest of the battle, once per round when an enemy moves to engage you, you can make the following attack against it as a free action before it has the chance to attack in melee.
 
@@ -592,6 +592,8 @@ Hit: 4d4 x 10 damage of the energy type of your choice (cold, fire, lightning). 
 Miss: Half damage.
 
 Epic Feat Each meteor now deals 5d4 x 10 damage.
+
+$
 
 Teleport
 

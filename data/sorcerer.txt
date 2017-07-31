@@ -273,7 +273,7 @@ $
 
 The Elven Shadows
 
-Ranged spell; Daily
+Ranged spell; Daily (see below)
 
 Special: Once you cast this spell in a battle, you can cast it at-will for the rest of that battle.
 

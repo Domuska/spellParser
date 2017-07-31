@@ -11,6 +11,8 @@ Adventurer Feat Brace for it now works against a critical hit from any type of a
 
 Champion Feat Brace for it works against any number of critical hits before your next turn.
 
+$
+
 Carve an Opening
 
 Flexible melee attack
@@ -20,6 +22,8 @@ Triggering Roll: Any natural odd roll
 Effect: Your crit range with melee attacks expands by a cumulative +1 this battle until you score a melee critical hit. When you score a melee critical hit, your crit range drops back to normal.
 
 Champion Feat The crit range bonus from carve an opening is +2 instead of +1.
+
+$
 
 Deadly Assault
 
@@ -32,6 +36,8 @@ Effect: Reroll any 1s from your damage roll. You’re stuck with the rerolls.
 Adventurer Feat Now you can reroll both 1s and 2s with deadly assault.
 
 Champion Feat Deadly assault now also triggers on a natural 17+.
+
+$
 
 Defensive Fighting
 
@@ -47,6 +53,8 @@ Champion Feat The bonus increases to +3.
 
 Epic Feat You also gain the bonus to Mental Defense.
 
+$
+
 Grim Intent
 
 Flexible melee attack
@@ -54,6 +62,8 @@ Flexible melee attack
 Triggering Roll: Any natural even miss
 
 Effect: The next time you would deal miss damage with a melee attack, add a WEAPON die to that damage. At 5th level, instead add 2 total WEAPON dice; at 8th level, instead add 3 total WEAPON dice.
+
+$
 
 Heavy Blows
 
@@ -67,6 +77,8 @@ Champion Feat If you attacked with a two-handed weapon, heavy blows can trigger 
 
 Epic Feat The bonus instead equals double the escalation die with a one-handed weapon, or triple it with a two-handed weapon.
 
+$
+
 Precision Attack
 
 Flexible melee attack
@@ -76,6 +88,8 @@ Triggering Roll: Any hit with a natural 16+
 Effect: You gain a bonus to the damage roll equal to your Dexterity modifier. At 5th level, the damage bonus increases to double your Dexterity modifier; at 8th level the damage bonus increases to triple it.
 
 Adventurer Feat You can now use precision attack with a ranged attack.
+
+$
 
 Second Shot
 
@@ -88,6 +102,8 @@ Effect: After this attack, you can make a basic ranged attack with the same weap
 You can’t use any maneuvers with the second attack.
 
 Champion Feat The second shot attack penalty is –2 instead.
+
+$
 
 Shield Bash
 
@@ -103,6 +119,8 @@ Adventurer Feat If the target is also engaged with any of your allies, you can h
 
 Champion Feat Once per battle, you can also daze the target (save ends) of your shield bash attack, if that enemy is staggered.
 
+$
+
 Two-Weapon Pressure
 
 Flexible melee attack
@@ -115,6 +133,7 @@ Effect: Until the end of your next turn, you gain a +2 melee attack bonus agains
 
 Champion Feat The bonus increases to +4.
 
+$
 3rd Level Maneuvers
 Hack & Slash
 
@@ -126,6 +145,8 @@ Triggering Roll: Any natural even roll, when the escalation die is 2+
 
 Effect: Make another melee weapon attack against a different target.
 
+$
+
 Make ’em Flinch
 
 Flexible ranged attack
@@ -133,6 +154,8 @@ Flexible ranged attack
 Triggering Roll: Any natural even miss
 
 Effect: Add the higher modifier from your Strength or Dexterity to the miss damage. At 5th level the damage bonus increases to double your chosen modifier; at 8th level the damage bonus increases to triple it.
+
+$
 
 Punish Them
 
@@ -150,6 +173,8 @@ Champion Feat The dazed effect is now save ends.
 
 Epic Feat The target is now weakened (save ends) instead of dazed.
 
+$
+
 Steady Now
 
 Flexible melee attack
@@ -159,6 +184,8 @@ Triggering Roll: Any natural even miss
 Effect: You gain temporary hit points equal to your Constitution modifier.
 
 Champion Feat The temporary hit points increase to double your Constitution modifier.
+
+$
 
 Strong Guard
 
@@ -174,6 +201,7 @@ Champion Feat Bonus also applies to PD.
 
 Epic Feat Bonus increases to +3.
 
+$
 5th Level Maneuvers
 A Dozen Cuts
 
@@ -184,6 +212,8 @@ Triggering Roll: Any natural even hit
 Effect: The target also takes ongoing damage equal to double your Dexterity modifier, or triple it at 8th level.
 
 Champion Feat Once per battle, you can trigger a dozen cuts with a natural odd hit.
+
+$
 
 Hero’s Skill
 
@@ -197,6 +227,8 @@ Champion Feat Add +4 to the attack roll instead of +2.
 
 Epic Feat The damage is no longer halved on a hit after using hero’s skill.
 
+$
+
 Sword Master’s Anticipation
 
 Flexible melee attack
@@ -206,6 +238,8 @@ Special: You must have the Skilled Intercept talent to use this maneuver.
 Triggering Roll: Any natural even roll
 
 Effect: The next time you use Skilled Intercept this battle, your Skilled Intercept save automatically succeeds.
+
+$
 
 7th Level Maneuvers
 Never Surrender
@@ -218,6 +252,8 @@ Effect: You can roll a save against a save ends effect.
 
 Epic Feat You gain a +2 bonus to the save.
 
+$
+
 Spinning Charge
 
 Flexible melee attack
@@ -226,11 +262,11 @@ Special: You must have moved before the attack.
 
 Triggering Roll: Any natural even hit
 
-Effect: After dealing damage, you can pop free from the target, move to a different nearby enemy, and make a basic melee attack against that enemy.
-
-You can’t use any maneuvers with the second attack, and it deals only half damage.
+Effect: After dealing damage, you can pop free from the target, move to a different nearby enemy, and make a basic melee attack against that enemy. You can’t use any maneuvers with the second attack, and it deals only half damage.
 
 Epic Feat If the escalation die is 3+, the second spinning charge attack deals full damage.
+
+$
 
 Sword of Destiny
 
@@ -242,18 +278,19 @@ Effect: You can heal using a free recovery.
 
 Epic Feat If the escalation die is 3+, you can now trigger sword of destiny with a natural 18+.
 
+$
 9th Level Maneuvers
 Combat Mastery
 
-Flexible melee attack
-
-Special: You can use this maneuver only once per battle.
+Flexible once-per-battle melee attack
 
 Triggering Roll: Natural 16+
 
 Effect: Increase the escalation die by 1.
 
 Epic Feat Combat mastery now also triggers on any natural even hit.
+
+$
 
 Set ’em Up
 
