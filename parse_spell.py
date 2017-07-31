@@ -5,7 +5,12 @@ import re, json, uuid, unicodedata, os, sys, codecs
 #import parse_spell as p
 #p.parse_spell("color_spray.txt")
 
-def convert_spells_to_json(fileName, targetFileName):
+'''
+	The main method used for converting spells from text file to json.
+	First argument is a text file in /data folder under where this program is run.
+	Second argument is the file name of the target text file where the JSON will be put to.
+'''
+def convert(fileName, targetFileName):
 
 		
 		
@@ -24,7 +29,7 @@ def convert_spells_to_json(fileName, targetFileName):
 			spell.append("spellLevel: " + str(spellLevel))
 			allSpells.append(spell)
 			spell = []
-		elif "Level Spells" in line or "Level Battle Cries" in line or "Level Songs" in line:
+		elif "Level Spells" in line or "Level Battle Cries" in line or "Level Songs" in line or "Maneuvers" in line:
 			spellLevel = line
 			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
@@ -69,22 +74,33 @@ def parse_spell(lines):
 	
 	dict = {}
 	#set name first
-	dict["name"] = lines[1]
+	dict["name"] = cleanUnicodeFromString(lines[1])
 	uprint(dict['name'])
 	
 	i = 1
 	for line in lines:
-	
-		#if spell is close-quarters, the recharge time is on the next row.
+		#for sorcerer, wizard, bard and cleric spells
+		#if spell is close-quarters, the recharge time is on another row
 		#if it is ranged spell, the recharge time is on same row after symbol ;
 		if "Close-quarters spell" in line:
-			print ("close-quarters spell")
-			dict["attackType"] = "Close-quarters"
-			dict["rechargeTime"] = lines[5]
+			#print ("close-quarters spell")
+			dict["attackType"] = line
+			#dict["rechargeTime"] = lines[5]
 		elif "Ranged spell" in line:
 			print("ranged spell")
 			dict["attackType"] = "Ranged spell"
 			dict["rechargeTime"] = re.sub(r'.*;', '', lines[3])
+			
+		#if line.startswith("Recharge", 0, 8)
+		
+		#Set the recharge time. It might also have been set above, since for ranged spells recharge time is written on the same row.
+		if line.startswith("Daily", 0, 5) or line.startswith("Recharge", 0, 8) or line.startswith("At-Will", 0, 7) or line.startswith("Cyclic", 0, 6):
+			line = cleanUnicodeFromString(line)
+			dict["rechargeTime"] = line 
+	
+		if line.startswith("Flexible", 0, 8):
+			line = cleanUnicodeFromString(line)
+			dict["rechargeTime"] = line
 			
 		#targets, such as Target: One nearby enemy
 		if line.startswith("Target", 0, 6):
@@ -96,8 +112,9 @@ def parse_spell(lines):
 			line = cleanUnicodeFromString(line)
 			dict["attackRoll"] = removeMetaText(line)
 		
-		#handle hit or effect portion, they go to same field. Clerics can have Cast for Power or Cast for Broad Effect, those in here too
-		if line.startswith("Hit", 0, 3) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) or line.startswith("Opening & Sustained", 0, 19):
+		#handle hit or effect portion, they go to same field. Clerics can have Cast for Power or Cast for Broad Effect, those in here too.
+		#Bards have Opening & Sustained effect and Final Verse, add them as well
+		if line.startswith("Hit", 0, 3) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11):
 			#print(line)
 			line = cleanUnicodeFromString(line)
 			if "hitDamageOrEffect" in dict:
@@ -116,13 +133,18 @@ def parse_spell(lines):
 			uprint("line starts with Miss: " + line)
 			dict["missDamage"] = removeMetaText(line)
 		
-		#lines that are only in few places, such as with chain spells or charm person.
-		if line.startswith("Special", 0, 7) or line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) or line.startswith("Always", 0, 6): 
+		#lines that are only in few places, such as with chain spells, wizard's teleport shield or resurrect
+		if line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) or line.startswith("Always", 0, 6): 
 			line = cleanUnicodeFromString(line)
 			if "notes" in dict:
 				dict["notes"] = dict["notes"] + "\n" + line
 			else:
 				dict["notes"] = line
+		
+		#many spells and big portion of fighter maneuvers have Special field
+		if line.startswith("Special", 0, 7):
+			line = cleanUnicodeFromString(line)
+			dict["special"] = removeMetaText(line)
 		
 		#handle feats
 		if line.startswith("Adventurer", 0, 10):
@@ -141,7 +163,12 @@ def parse_spell(lines):
 			line = cleanUnicodeFromString(line)
 			line = re.sub(r'.*Epic Feat ', '', line)
 			dict["epicFeat"] = line
-			
+		
+		#for example bard spells have standard action written as casting time, line also tells sustain roll needed
+		if line.startswith("Standard action", 0, 15):
+			line = cleanUnicodeFromString(line)
+			dict["castingTime"] = line
+		
 		if line.startswith("Quick action", 0, 12):
 			line = cleanUnicodeFromString(line)
 			dict["castingTime"] = line
@@ -159,7 +186,13 @@ def parse_spell(lines):
 			dict["groupName"] = removeMetaText(line)
 		i += 1
 		
-	if "castingTime" not in dict:
+		if line.startswith("Triggering", 0, 10):
+			line = cleanUnicodeFromString(line)
+			dict["trigger"] = removeMetaText(line)
+	
+	#most spells have no casting time written, at that case it's standard action.
+	#Flexible attacks are not included, naturally.
+	if "castingTime" not in dict and "Flexible" not in dict["rechargeTime"]:
 		dict["castingTime"] = "Standard action to cast"
 		
 	return dict
@@ -171,8 +204,6 @@ def removeMetaText(text):
 
 #method for removing \u unicode string elements from text. Most likely not the best solution but eh, it works.
 def cleanUnicodeFromString(text):
-	#text.replace("\u00e2\u20ac\u2122", "AAAAAAA")
-	#text.decode('unicode_escape').encode('ascii', 'ignore')
 	#print (text)
 	if "\u00e2\u20ac\u02dc" in text:
 		text = text.replace("\u00e2\u20ac\u02dc", "'")
@@ -180,6 +211,10 @@ def cleanUnicodeFromString(text):
 		text = text.replace("\u00e2\u20ac\u2122", "'")
 	if "\u00e2\u20ac\u201c" in text:
 		text = text.replace("\u00e2\u20ac\u201c", "-")
+	if "\u00e2\u20ac\u201d" in text:
+		text = text.replace("\u00e2\u20ac\u201d", "-")
+	if "\u00e2\u20ac\u2122" in text:
+		text = text.replace("\u00e2\u20ac\u2122", "\'")
 	return text
 
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
