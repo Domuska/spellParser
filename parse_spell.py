@@ -90,7 +90,7 @@ def convert(fileName, powerListName):
 		#file.write("\"" + str(spellId) + "\":")
 		#file.write(json.dumps(parse_spell(spell)))
 		#file.write(",")
-		parsedSpell = parse_spell(spell)
+		parsedSpell = parse_spell(spell, powerListId)
 		spellsTable[spellId] = parsedSpell
 		spellBooksTable[spellId] = True
 		groupName = parsedSpell["groupName"]
@@ -129,7 +129,7 @@ def convert(fileName, powerListName):
 #used for parsing a single spells
 #takes in an array with the lines of the spell in it
 #returns a dictionary with the proper json field names as keys and values parsed from rows of the list
-def parse_spell(lines):
+def parse_spell(lines, powerListId):
 	#with open(fileName) as f:
 	#	lines = [line.rstrip('\n') for line in open(fileName)]
 		
@@ -288,7 +288,11 @@ def parse_spell(lines):
 		#print(powerDictionary["attackType"])
 		if "attackType" in powerDictionary and ("Flexible" not in powerDictionary["attackType"] and "Melee attack" not in powerDictionary["attackType"] and "Ranged attack" not in powerDictionary["attackType"]):
 			powerDictionary["castingTime"] = "Standard action to cast"
-		
+
+	#add power list id if it is supplied
+	if powerListId is not None:
+		powerDictionary["powerListId"] = powerListId
+
 	return powerDictionary
 	
 def removeMetaText(text):
