@@ -164,7 +164,6 @@ Champion Feat You can choose to target either demons or undead with the spell (b
 Epic Feat Increase the targeting limit by 100 hp.
 
 $
-
 3rd Level Spells
 Cause Fear
 
