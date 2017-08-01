@@ -82,13 +82,13 @@ def convert(fileName, targetFileName, powerListName):
 		#file.write(",")
 		parsedSpell = parse_spell(spell)
 		spellsTable[spellId] = parsedSpell
-		spellBooksTable[spellId] = "true"
+		spellBooksTable[spellId] = True
 		groupName = parsedSpell["groupName"]
 		powerName = parsedSpell["name"]
 		if groupName not in powerGroupsTable:
 			powerGroupsTable[groupName] = {}
 		powerGroupsTable[groupName][spellId] = {}
-		powerGroupsTable[groupName][spellId][powerName] = "true"
+		powerGroupsTable[groupName][spellId][powerName] = True
 		#powerGroupsTable[groupName][spellId][powerName] = "true"
 
 	database["spells"] = spellsTable
@@ -100,7 +100,7 @@ def convert(fileName, targetFileName, powerListName):
 	database["spell_groups"][powerListId] = powerGroupsTable
 	#write the new database to json file
 	with open("allSpells.json", "w") as data_file:
-		json.dump(database, data_file)
+		json.dump(database, data_file, indent=2)
 
 	#write last element without a ,
 	#spellId = uuid.uuid4()
