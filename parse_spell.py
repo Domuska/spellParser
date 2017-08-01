@@ -9,8 +9,9 @@ import re, json, uuid, unicodedata, os, sys, codecs
 	The main method used for converting spells from text file to json.
 	First argument is a text file in /data folder under where this program is run.
 	Second argument is the file name of the target text file where the JSON will be put to.
+	Third argument is the name of the power list that will be written to the DB
 '''
-def convert(fileName, targetFileName):
+def convert(fileName, targetFileName, powerListName):
 
 	fileName = os.path.join("data", fileName)
 	print(fileName)
@@ -18,49 +19,102 @@ def convert(fileName, targetFileName):
 		lines = [line.rstrip('\n') for line in open(fileName)]
 	
 	allSpells = []
+
+	powerListId = str(uuid.uuid4())
 	
 	#find a single spell, the spells should be separated by $ symbol
 	spell = []
 	for line in lines:
+		#spells are separated with $
 		if '$' in line:
 			#print("$ found, spell ended")
 			spell.append("spellLevel: " + str(spellLevel))
 			allSpells.append(spell)
 			spell = []
+		#lines can have "1st Level Spells", that means spells below this line belong to 1st level
 		elif "Level Spells" in line or "Level Battle Cries" in line or "Level Songs" in line or "Maneuvers" in line or "Powers" in line:
 			spellLevel = line
 			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
 			spell.append("")
+		#otherwise just add a new line to the array containing spell's rows
 		else:
 			spell.append(line)
 	
 	#add the last spell as well
 	spell.append("spellLevel: " + str(spellLevel))
 	allSpells.append(spell)
-	
+
+	if os.stat("allSpells.json").st_size > 0:
+		#read the existing data
+		with open("allSpells.json") as data_file:
+			database = json.load(data_file)
+	else:
+		data_file = open("allSpells.json", "w")
+		database = {}
+
+	# table for saving single spells
+	if "spells" in database:
+		spellsTable = database["spells"]
+	else:
+		spellsTable = {}
+
+	if "spell_lists" not in database:
+		database["spell_lists"] = {}
+	# table for saving power IDs in a spell book (such as all wizard or sorcerer spells)
+	spellBooksTable = {}
+
+	if "spell_groups" not in database:
+		database["spell_groups"] = {}
+	#table for saving the groups in helper table, save power names and IDs inside groups
+	#powerGroupsTable = database["spell_groups"][powerListId]
+	powerGroupsTable = {}
+
 	#first write the opening bracket to the file
-	file = open(targetFileName, "a")
-	file.write("{")
+	#file = open(targetFileName, "a")
+	#file.write("{")
 	#write the spells we parsed earlier
-	for spell in allSpells[:-1]:
-		identifier = uuid.uuid4()
-		file.write("\"" + str(identifier) + "\":")
-		file.write(json.dumps(parse_spell(spell)))
-		file.write(",")
+	#for spell in allSpells[:-1]:
+	for spell in allSpells:
+		spellId = str(uuid.uuid4())
+		#file.write("\"" + str(spellId) + "\":")
+		#file.write(json.dumps(parse_spell(spell)))
+		#file.write(",")
+		parsedSpell = parse_spell(spell)
+		spellsTable[spellId] = parsedSpell
+		spellBooksTable[spellId] = "true"
+		groupName = parsedSpell["groupName"]
+		powerName = parsedSpell["name"]
+		if groupName not in powerGroupsTable:
+			powerGroupsTable[groupName] = {}
+		powerGroupsTable[groupName][spellId] = {}
+		powerGroupsTable[groupName][spellId][powerName] = "true"
+		#powerGroupsTable[groupName][spellId][powerName] = "true"
+
+	database["spells"] = spellsTable
+
+	database["spell_lists"][powerListId] = {}
+	database["spell_lists"][powerListId]["name"] = powerListName
+	database["spell_lists"][powerListId]["spells"] = spellBooksTable
+
+	database["spell_groups"][powerListId] = powerGroupsTable
+	#write the new database to json file
+	with open("allSpells.json", "w") as data_file:
+		json.dump(database, data_file)
+
 	#write last element without a ,
-	identifier = uuid.uuid4()
-	file.write("\"" + str(identifier) + "\":")
-	file.write(json.dumps(parse_spell(allSpells[-1])))
+	#spellId = uuid.uuid4()
+	#file.write("\"" + str(spellId) + "\":")
+	#file.write(json.dumps(parse_spell(allSpells[-1])))
 	#add closing bracket
-	file.write("}")
+	#file.write("}")
 		
 		
 	#print("\n\n")
 	#print(lines)
 	#with open("spells.txt", "a") as file:
 	#	file.write(json.dumps(dict))
-	
+	data_file.close()
 
 #used for parsing a single spells
 #takes in an array with the lines of the spell in it
