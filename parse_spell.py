@@ -5,6 +5,18 @@ import re, json, uuid, unicodedata, os, sys, codecs
 #import parse_spell as p
 #p.parse_spell("color_spray.txt")
 
+'''
+The source data needs to be in following format:
+
+name of power is on the second row of the power
+
+rows with separate data, such has hit, effect, adventurer feat etc need to be on their own rows
+
+powers need to be separated by $, and after this there needs to be one row (can have text or not), see above
+
+
+'''
+
 def create_spell_list():
 	spell_lists = [("bard.txt", "Bard's Spells"),
 				   ("cleric.txt", "Cleric's Spells"),
