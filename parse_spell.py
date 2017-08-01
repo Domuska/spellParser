@@ -5,13 +5,24 @@ import re, json, uuid, unicodedata, os, sys, codecs
 #import parse_spell as p
 #p.parse_spell("color_spray.txt")
 
+def create_spell_list():
+	spell_lists = [("bard.txt", "Bard's spells"),
+				   ("cleric.txt", "Cleric's spells"),
+				   ("fighter.txt", "Fighter's Maneuvers"),
+				   ("rogue.txt", "Rogue's powers"),
+				   ("sorcerer.txt", "Sorcerer's spells"),
+				   ("wizard.txt", "Wizard's spells")]
+
+	for list_tuple in spell_lists:
+		convert(list_tuple[0], list_tuple[1])
+
 '''
 	The main method used for converting spells from text file to json.
+	Method will write the output to allSpells.json
 	First argument is a text file in /data folder under where this program is run.
-	Second argument is the file name of the target text file where the JSON will be put to.
 	Third argument is the name of the power list that will be written to the DB
 '''
-def convert(fileName, targetFileName, powerListName):
+def convert(fileName, powerListName):
 
 	fileName = os.path.join("data", fileName)
 	print(fileName)
@@ -50,7 +61,6 @@ def convert(fileName, targetFileName, powerListName):
 		with open("allSpells.json") as data_file:
 			database = json.load(data_file)
 	else:
-		data_file = open("allSpells.json", "w")
 		database = {}
 
 	# table for saving single spells
@@ -211,10 +221,10 @@ def parse_spell(lines):
 		#lines that are only in few places, such as with chain spells, teleport shield, Tumbling strike or resurrect
 		if line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) or line.startswith("Always", 0, 6) or line.startswith("Note", 0, 4):
 			line = cleanUnicodeFromString(line)
-			if "notes" in powerDictionary:
-				powerDictionary["notes"] = powerDictionary["notes"] + "\n" + line
+			if "playerNotes" in powerDictionary:
+				powerDictionary["playerNotes"] = powerDictionary["playerNotes"] + "\n" + line
 			else:
-				powerDictionary["notes"] = line
+				powerDictionary["playerNotes"] = line
 		
 		#many spells and big portion of fighter maneuvers have Special field
 		if line.startswith("Special", 0, 7):
