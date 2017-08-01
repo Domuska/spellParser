@@ -6,23 +6,25 @@ import re, json, uuid, unicodedata, os, sys, codecs
 #p.parse_spell("color_spray.txt")
 
 def create_spell_list():
-	spell_lists = [("bard.txt", "Bard's spells"),
-				   ("cleric.txt", "Cleric's spells"),
+	spell_lists = [("bard.txt", "Bard's Spells"),
+				   ("cleric.txt", "Cleric's Spells"),
 				   ("fighter.txt", "Fighter's Maneuvers"),
-				   ("rogue.txt", "Rogue's powers"),
-				   ("sorcerer.txt", "Sorcerer's spells"),
-				   ("wizard.txt", "Wizard's spells")]
+				   ("rogue.txt", "Rogue's Powers"),
+				   ("sorcerer.txt", "Sorcerer's Spells"),
+				   ("wizard.txt", "Wizard's Spells"),
+				   ("commander.txt", "Commander's Powers")]
 
 	for list_tuple in spell_lists:
 		convert(list_tuple[0], list_tuple[1])
 
 '''
 	The main method used for converting spells from text file to json.
-	Method will write the output to allSpells.json
+	Method reads existing data and appends to file allSpells.json
 	First argument is a text file in /data folder under where this program is run.
-	Third argument is the name of the power list that will be written to the DB
+	Second argument is the name of the power list that will be written to the DB
+	Third argument is optional file name, if this is supplied the spells are also written to the file
 '''
-def convert(fileName, powerListName):
+def convert(fileName, powerListName, targetFileName=None):
 
 	fileName = os.path.join("data", fileName)
 	print(fileName)
@@ -43,7 +45,9 @@ def convert(fileName, powerListName):
 			allSpells.append(spell)
 			spell = []
 		#lines can have "1st Level Spells", that means spells below this line belong to 1st level
-		elif "Level Spells" in line or "Level Battle Cries" in line or "Level Songs" in line or "Maneuvers" in line or "Powers" in line:
+		elif "Level Spells" in line or "Level Battle Cries" in line \
+				or "Level Songs" in line or "Maneuvers" in line or "Powers" in line\
+				or "Level Tactics" in line or "Level Commands" in line:
 			spellLevel = line
 			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
@@ -111,6 +115,10 @@ def convert(fileName, powerListName):
 	#write the new database to json file
 	with open("allSpells.json", "w") as data_file:
 		json.dump(database, data_file, indent=2)
+
+	if targetFileName is not None:
+		with open(targetFileName, "w") as file:
+			json.dump(spellsTable, file, indent=2)
 
 	#write last element without a ,
 	#spellId = uuid.uuid4()
@@ -193,7 +201,7 @@ def parse_spell(lines, powerListId):
 		
 		#handle hit or effect portion, they go to same field. Clerics can have Cast for Power or Cast for Broad Effect, those in here too.
 		#Bards have Opening & Sustained effect and Final Verse, add them as well
-		if line.startswith("Hit", 0, 3) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11):
+		if line.startswith("Hit:", 0, 4) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11):
 			#print(line)
 			line = cleanUnicodeFromString(line)
 			if "hitDamageOrEffect" in powerDictionary:
@@ -218,8 +226,12 @@ def parse_spell(lines, powerListId):
 			else:
 				powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n" + line
 		
-		#lines that are only in few places, such as with chain spells, teleport shield, Tumbling strike or resurrect
-		if line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) or line.startswith("Always", 0, 6) or line.startswith("Note", 0, 4):
+		# lines that are only in few places, such as with
+		# chain spells, Teleport Shield, Tumbling strike or Resurrect
+		# Also add commander command cost
+		if line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) \
+				or line.startswith("Always", 0, 6) or line.startswith("Note", 0, 4)\
+				or line.startswith("Cost", 0, 4):
 			line = cleanUnicodeFromString(line)
 			if "playerNotes" in powerDictionary:
 				powerDictionary["playerNotes"] = powerDictionary["playerNotes"] + "\n" + line
@@ -313,6 +325,8 @@ def cleanUnicodeFromString(text):
 		text = text.replace("\u00e2\u20ac\u201d", "-")
 	if "\u00e2\u20ac\u2122" in text:
 		text = text.replace("\u00e2\u20ac\u2122", "\'")
+	if "\u2019" in text:
+		text = text.replace("\u2019", "\'")
 	return text
 
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
