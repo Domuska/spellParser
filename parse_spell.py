@@ -24,7 +24,8 @@ def create_spell_list():
 				   ("rogue.txt", "Rogue's Powers"),
 				   ("sorcerer.txt", "Sorcerer's Spells"),
 				   ("wizard.txt", "Wizard's Spells"),
-				   ("commander.txt", "Commander's Powers")]
+				   ("commander.txt", "Commander's Powers"),
+				   ("monk.txt", "Monk's Forms")]
 
 	for list_tuple in spell_lists:
 		convert(list_tuple[0], list_tuple[1])
