@@ -59,8 +59,9 @@ def convert(fileName, powerListName, targetFileName=None):
 		#lines can have "1st Level Spells", that means spells below this line belong to 1st level
 		elif "Level Spells" in line or "Level Battle Cries" in line \
 				or "Level Songs" in line or "Maneuvers" in line or "Powers" in line\
-				or "Level Tactics" in line or "Level Commands" in line:
-			spellLevel = line
+				or "Level Tactics" in line or "Level Commands" in line\
+				or "Adventurer Tier" in line or "Champion Tier" in line or "Epic Tier" in line:
+			spellLevel = cleanUnicodeFromString(line)
 			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
 			spell.append("")
@@ -213,7 +214,9 @@ def parse_spell(lines, powerListId):
 		
 		#handle hit or effect portion, they go to same field. Clerics can have Cast for Power or Cast for Broad Effect, those in here too.
 		#Bards have Opening & Sustained effect and Final Verse, add them as well
-		if line.startswith("Hit:", 0, 4) or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11):
+		if line.startswith("Hit:", 0, 4) or line.startswith("Natural Even Hit:", 0, 17) or line.startswith("Natural Odd Hit:", 0, 16)\
+				or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) \
+				or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11):
 			#print(line)
 			line = cleanUnicodeFromString(line)
 			if "hitDamageOrEffect" in powerDictionary:
@@ -227,16 +230,24 @@ def parse_spell(lines, powerListId):
 			print("\n" + line)
 			powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n" + line
 
-
-		if line.startswith("Miss", 0, 4):
-			line = cleanUnicodeFromString(line)
-			#uprint("line starts with Miss: " + line)
-			# Slick feint from rogues can have multiple miss effects. Since it's special.
-			if "missDamage" not in powerDictionary:
-				line = removeMetaText(line)
-				powerDictionary["missDamage"] = line
-			else:
-				powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n" + line
+		if "Miss" in line:
+			if line.startswith("Miss", 0, 4):
+				line = cleanUnicodeFromString(line)
+				#uprint("line starts with Miss: " + line)
+				# Slick feint from rogues can have multiple miss effects. Since it's special.
+				if "missDamage" not in powerDictionary:
+					line = removeMetaText(line)
+					powerDictionary["missDamage"] = cleanUnicodeFromString(line)
+				else:
+					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n" + cleanUnicodeFromString(line)
+			#handle monk oddities, they have natural even and odd miss effects.
+			#we need to write the whole lines to the miss field so user will know if effect is for natural even or odd.
+			#the above writing will remove the "Natural Even Miss:" text from the first entry (removeMetaText does it)
+			elif line.startswith("Natural Even Miss:", 0, 18) or line.startswith("Natural Odd Miss:", 0, 17):
+				if "missDamage" not in powerDictionary:
+					powerDictionary["missDamage"] = cleanUnicodeFromString(line)
+				else:
+					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n" + cleanUnicodeFromString(line)
 		
 		# lines that are only in few places, such as with
 		# chain spells, Teleport Shield, Tumbling strike or Resurrect
@@ -339,6 +350,8 @@ def cleanUnicodeFromString(text):
 		text = text.replace("\u00e2\u20ac\u2122", "\'")
 	if "\u2019" in text:
 		text = text.replace("\u2019", "\'")
+	if "\u00e2\u20ac\u201d" in text:
+		text = text.replace("\u00e2\u20ac\u201d", "-")
 	return text
 
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
