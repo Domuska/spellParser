@@ -27,7 +27,9 @@ def create_spell_list():
 				   ("commander.txt", "Commander's Powers"),
 				   ("monk.txt", "Monk's Forms"),
 				   ("druid_terrainCaster.txt", "Druid's Terrain Caster Spells"),
-				   ("druid_elementalCaster.txt", "Druid's Elemental Caster Spells")]
+				   ("druid_elementalCaster.txt", "Druid's Elemental Caster Spells"),
+				   ("animalCompanionSpells.txt", "Animal Companion Spells"),
+				   ("occultist.txt", "Occultist's Spells")]
 
 	for list_tuple in spell_lists:
 		convert(list_tuple[0], list_tuple[1])
@@ -60,7 +62,7 @@ def convert(fileName, powerListName, targetFileName=None):
 			allSpells.append(spell)
 			spell = []
 		#lines can have "1st Level Spells", that means spells below this line belong to 1st level
-		elif "Level Spells" in line or "Level Battle Cries" in line \
+		elif "Level Spells" in line  or "Invocations" in line  or "Level Battle Cries" in line \
 				or "Level Songs" in line or "Maneuvers" in line or "Powers" in line\
 				or "Level Tactics" in line or "Level Commands" in line\
 				or "Adventurer Tier" in line or "Champion Tier" in line or "Epic Tier" in line\
@@ -187,7 +189,9 @@ def parse_spell(lines, powerListId):
 		#	powerDictionary["rechargeTime"] = "momentum"
 		
 		#Set the recharge time. It might also have been set above, since for ranged spells recharge time is written on the same row.
-		if line.startswith("Daily", 0, 5) or line.startswith("Recharge", 0, 8) or line.startswith("At-Will", 0, 7) or line.startswith("Cyclic", 0, 6):
+		if line.startswith("Daily", 0, 5) or line.startswith("Recharge", 0, 8) \
+				or line.startswith("At-Will", 0, 7) or line.startswith("Cyclic", 0, 6)\
+				or line.startswith("Variable"):
 			line = cleanUnicodeFromString(line)
 			#add requires momentum to rechargetime, in rules momentum is in its' own line but makes sense to have it here
 			#if "rechargeTime" in powerDictionary and "momentum" in powerDictionary["rechargeTime"]:
@@ -224,7 +228,8 @@ def parse_spell(lines, powerListId):
 		#Bards have Opening & Sustained effect and Final Verse, add them as well
 		if line.startswith("Hit:", 0, 4) or line.startswith("Natural Even Hit:", 0, 17) or line.startswith("Natural Odd Hit:", 0, 16)\
 				or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) \
-				or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11):
+				or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11)\
+				or line.startswith("Hit vs.", 0, 7):
 			#print(line)
 			line = cleanUnicodeFromString(line)
 			if "hitDamageOrEffect" in powerDictionary:
@@ -250,12 +255,16 @@ def parse_spell(lines, powerListId):
 					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n\n" + cleanUnicodeFromString(line)
 			#handle monk oddities, they have natural even and odd miss effects.
 			#we need to write the whole lines to the miss field so user will know if effect is for natural even or odd.
-			#the above writing will remove the "Natural Even Miss:" text from the first entry (removeMetaText does it)
-			elif line.startswith("Natural Even Miss:", 0, 18) or line.startswith("Natural Odd Miss:", 0, 17):
+			#the above writing will remove the "Natural Even Miss:" text from the first entry (removeMetaText does it).
+			#Also Necromancer's Unholy Blasts needs this (first and second miss)
+			elif line.startswith("Natural Even Miss:", 0, 18) or line.startswith("Natural Odd Miss:", 0, 17)\
+				or line.startswith("First Miss", 0, 10) or line.startswith("Second Miss", 0, 11):
 				if "missDamage" not in powerDictionary:
 					powerDictionary["missDamage"] = cleanUnicodeFromString(line)
 				else:
 					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n\n" + cleanUnicodeFromString(line)
+
+
 		
 		# lines that are only in few places, such as with
 		# chain spells, Teleport Shield, Tumbling strike or Resurrect
@@ -264,7 +273,7 @@ def parse_spell(lines, powerListId):
 				or line.startswith("Always", 0, 6) or line.startswith("Note", 0, 4)\
 				or line.startswith("Cost", 0, 4)\
 				or line.startswith("Limited Casting", 0, 15) or line.startswith("Limited Resurrection", 0, 21)\
-				or line.startswith("Skill Check", 0, 11):
+				or line.startswith("Skill Check", 0, 11) or line.startswith("Retain Focus", 0, 12):
 			line = cleanUnicodeFromString(line)
 			if "playerNotes" in powerDictionary:
 				powerDictionary["playerNotes"] = powerDictionary["playerNotes"] + "\n\n" + line
