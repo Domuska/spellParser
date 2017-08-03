@@ -25,7 +25,9 @@ def create_spell_list():
 				   ("sorcerer.txt", "Sorcerer's Spells"),
 				   ("wizard.txt", "Wizard's Spells"),
 				   ("commander.txt", "Commander's Powers"),
-				   ("monk.txt", "Monk's Forms")]
+				   ("monk.txt", "Monk's Forms"),
+				   ("druid_terrainCaster.txt", "Druid's Terrain Caster Spells"),
+				   ("druid_elementalCaster.txt", "Druid's Elemental Caster Spells")]
 
 	for list_tuple in spell_lists:
 		convert(list_tuple[0], list_tuple[1])
@@ -61,7 +63,12 @@ def convert(fileName, powerListName, targetFileName=None):
 		elif "Level Spells" in line or "Level Battle Cries" in line \
 				or "Level Songs" in line or "Maneuvers" in line or "Powers" in line\
 				or "Level Tactics" in line or "Level Commands" in line\
-				or "Adventurer Tier" in line or "Champion Tier" in line or "Epic Tier" in line:
+				or "Adventurer Tier" in line or "Champion Tier" in line or "Epic Tier" in line\
+				or "Cave, Dungeon, Underworld" in line or "Forest, Woods" in line \
+				or line.startswith("Ice, Tundra", 0, 11) or line.startswith("Migration Route", 0, 15)\
+				or line.startswith("Mountains", 0, 10) or line.startswith("Plains", 0, 6)\
+				or line.startswith("Ruins", 0, 5) or line.startswith("Swamp, Lake", 0, 11)\
+				or line.startswith("Elemental Mastery Spells", 0, 24):
 			spellLevel = cleanUnicodeFromString(line)
 			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
@@ -203,7 +210,7 @@ def parse_spell(lines, powerListId):
 			if "target" not in powerDictionary:
 				powerDictionary["target"] = line
 			else:
-				powerDictionary["target"] = powerDictionary["target"] + "\n" + line
+				powerDictionary["target"] = powerDictionary["target"] + "\n\n" + line
 		
 		#attack roll, such as Attack: Wisdom + Level vs. PD
 		if line.startswith("Attack", 0, 6):
@@ -211,7 +218,7 @@ def parse_spell(lines, powerListId):
 			if "attackRoll" not in powerDictionary:
 				powerDictionary["attackRoll"] = removeMetaText(line)
 			else:
-				powerDictionary["attackRoll"] = powerDictionary["attackRoll"] + "\n" + line
+				powerDictionary["attackRoll"] = powerDictionary["attackRoll"] + "\n\n" + line
 		
 		#handle hit or effect portion, they go to same field. Clerics can have Cast for Power or Cast for Broad Effect, those in here too.
 		#Bards have Opening & Sustained effect and Final Verse, add them as well
@@ -221,7 +228,7 @@ def parse_spell(lines, powerListId):
 			#print(line)
 			line = cleanUnicodeFromString(line)
 			if "hitDamageOrEffect" in powerDictionary:
-				powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n" + line
+				powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 			else:
 				powerDictionary["hitDamageOrEffect"] = removeMetaText(line)
 				
@@ -229,7 +236,7 @@ def parse_spell(lines, powerListId):
 		if line.startswith("3rd", 0, 3) or line.startswith("5th", 0, 3) or line.startswith("7th", 0, 3) or line.startswith("9th", 0, 3):
 			line = cleanUnicodeFromString(line)
 			print("\n" + line)
-			powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n" + line
+			powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 
 		if "Miss" in line:
 			if line.startswith("Miss", 0, 4):
@@ -240,7 +247,7 @@ def parse_spell(lines, powerListId):
 					line = removeMetaText(line)
 					powerDictionary["missDamage"] = cleanUnicodeFromString(line)
 				else:
-					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n" + cleanUnicodeFromString(line)
+					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n\n" + cleanUnicodeFromString(line)
 			#handle monk oddities, they have natural even and odd miss effects.
 			#we need to write the whole lines to the miss field so user will know if effect is for natural even or odd.
 			#the above writing will remove the "Natural Even Miss:" text from the first entry (removeMetaText does it)
@@ -248,27 +255,40 @@ def parse_spell(lines, powerListId):
 				if "missDamage" not in powerDictionary:
 					powerDictionary["missDamage"] = cleanUnicodeFromString(line)
 				else:
-					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n" + cleanUnicodeFromString(line)
+					powerDictionary["missDamage"] = powerDictionary["missDamage"] + "\n\n" + cleanUnicodeFromString(line)
 		
 		# lines that are only in few places, such as with
 		# chain spells, Teleport Shield, Tumbling strike or Resurrect
 		# Also add commander command cost
 		if line.startswith("Chain", 0, 5) or line.startswith("Limited", 0, 7) \
 				or line.startswith("Always", 0, 6) or line.startswith("Note", 0, 4)\
-				or line.startswith("Cost", 0, 4):
+				or line.startswith("Cost", 0, 4)\
+				or line.startswith("Limited Casting", 0, 15) or line.startswith("Limited Resurrection", 0, 21)\
+				or line.startswith("Skill Check", 0, 11):
 			line = cleanUnicodeFromString(line)
 			if "playerNotes" in powerDictionary:
-				powerDictionary["playerNotes"] = powerDictionary["playerNotes"] + "\n" + line
+				powerDictionary["playerNotes"] = powerDictionary["playerNotes"] + "\n\n" + line
 			else:
 				powerDictionary["playerNotes"] = line
-		
+		#handle Resurrection a bit differently
+		elif line.startswith("resurrection_note", 0, 17):
+			powerDictionary["playerNotes"] = \
+				powerDictionary["playerNotes"] + "\n\n" + removeMetaText(cleanUnicodeFromString(line))
+		#handle spells that have tables in spell description (example Touch of Evil) a bit differently
+		elif line.startswith("table_note", 0, 10):
+			if "playerNotes" in powerDictionary:
+				powerDictionary["playerNotes"] = \
+					powerDictionary["playerNotes"] + "\n\n" + cleanUnicodeFromString(removeTableNoteText(line))
+			else:
+				powerDictionary["playerNotes"] = cleanUnicodeFromString(removeTableNoteText(line))
+
 		#many spells and big portion of fighter maneuvers have Special field
 		if line.startswith("Special", 0, 7):
 			line = cleanUnicodeFromString(line)
 			if "special" not in powerDictionary:
 				powerDictionary["special"] = removeMetaText(line)
 			else:
-				powerDictionary["special"] = powerDictionary["special"] + "\n" + removeMetaText(line)
+				powerDictionary["special"] = powerDictionary["special"] + "\n\n" + removeMetaText(line)
 		
 		#handle feats
 		if line.startswith("Adventurer", 0, 10):
@@ -335,6 +355,9 @@ def removeMetaText(text):
 	lineText = re.sub(r'.*:', '', text)
 	#remove first character since regex above leaves an empty space
 	return lineText[1:]
+
+def removeTableNoteText(text):
+	return text.replace("table_note:", "")
 
 #method for removing \u unicode string elements from text. Most likely not the best solution but eh, it works.
 def cleanUnicodeFromString(text):
