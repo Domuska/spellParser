@@ -3,7 +3,13 @@ import re, json, uuid, unicodedata, os, sys, codecs
 #used for parsing spell data that is gotten from http://www.13thagesrd.com
 #usage: 
 #import parse_spell as p
-#p.parse_spell("color_spray.txt")
+#p.create_spell_list()
+#this will create a file allSpells.json in folder you're currently in. This requires that you have properly
+#formatted text files (look at file names in create_spell_list() under data/ folder of your current location.
+#you can create only a single spell list by calling
+# p.convert("source text file.txt", "name of power list", "target file name"
+#this will create a new file using the third argument as name for the file to where you're currently in, and
+#create allSpells.json to folder you're currently in. It will only append to both files if they already exist.
 
 '''
 The source data needs to be in following format:
@@ -13,7 +19,6 @@ name of power is on the second row of the power
 rows with separate data, such has hit, effect, adventurer feat etc need to be on their own rows
 
 powers need to be separated by $, and after this there needs to be one row (can have text or not), see above
-
 
 '''
 
