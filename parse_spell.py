@@ -30,7 +30,8 @@ def create_spell_list():
 				   ("druid_elementalCaster.txt", "Druid's Elemental Caster Spells"),
 				   ("animalCompanionSpells.txt", "Animal Companion Spells"),
 				   ("occultist.txt", "Occultist's Spells"),
-				   ("necromancer.txt", "Necromancer's Spells")]
+				   ("necromancer.txt", "Necromancer's Spells"),
+				   ("chaosMage.txt", "Chaos Mage's Spells")]
 
 	for list_tuple in spell_lists:
 		convert(list_tuple[0], list_tuple[1])
@@ -71,8 +72,12 @@ def convert(fileName, powerListName, targetFileName=None):
 				or line.startswith("Ice, Tundra", 0, 11) or line.startswith("Migration Route", 0, 15)\
 				or line.startswith("Mountains", 0, 10) or line.startswith("Plains", 0, 6)\
 				or line.startswith("Ruins", 0, 5) or line.startswith("Swamp, Lake", 0, 11)\
-				or line.startswith("Elemental Mastery Spells", 0, 24):
+				or line.startswith("Elemental Mastery Spells", 0, 24)\
+				or line.startswith("Attack Spells", 0, 13) or line.startswith("Defense Spells", 0, 14)\
+				or line.startswith("Blood of Warriors", 0, 17) or line.startswith("Light of the High Ones", 0, 22)\
+				or line.startswith("Twisted Path", 0, 12):
 			spellLevel = cleanUnicodeFromString(line)
+			print(spellLevel)
 			#print("Spell level found!" + spellLevel)
 			#add an extra empty line, we depend on line number to get spell name (since the line has no other identifier), hopefully it works.
 			spell.append("")
@@ -232,8 +237,9 @@ def parse_spell(lines, powerListId):
 				or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11)\
 				or line.startswith("Hit vs.", 0, 7):
 			line = cleanUnicodeFromString(line)
-			#handle vampiric form a bit differently, it grants an attack that should be printed to the effect block
-			if "name" in powerDictionary and "Vampiric Form" in powerDictionary["name"]:
+			#handle "vampiric form" & "coronation" a bit differently,
+			#they grant an attack that should be printed to the effect block
+			if "name" in powerDictionary and ("Vampiric Form" or "Coronation" in powerDictionary["name"]):
 				if "hitDamageOrEffect" in powerDictionary:
 					if "Attack" in line:
 						powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line.replace("Effect: ", "")
@@ -241,13 +247,14 @@ def parse_spell(lines, powerListId):
 						powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 				else:
 					powerDictionary["hitDamageOrEffect"] = removeMetaText(line)
-			#handle hit vs. x lines differently, those whole lines should be added, removing meta text can make text confusing
-			if "Hit vs" in line:
+			#handle "hit vs. ally/enemy/staggered target/xxx" and "natural even/odd" lines differently,
+			#those whole lines should be added, removing text before the : symbol makes the text confusing
+			elif "Hit vs" in line or line.startswith("Natural", 0, 7):
 				if "hitDamageOrEffect" in powerDictionary:
 					powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 				else:
 					powerDictionary["hitDamageOrEffect"] = line
-			#check if we already have the entry in dictionary, if so just append more text to it
+			# check if we already have the entry in dictionary, if so just append more text to it
 			elif "hitDamageOrEffect" in powerDictionary:
 				powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 			#otherwise create a new entry to the dictionary and add the line (without the info text, such as effect:)
@@ -404,6 +411,11 @@ def cleanUnicodeFromString(text):
 		text = text.replace("\u00e2\u20ac\u201d", "-")
 	if "\u2014" in text:
 		text = text.replace("\u2014", "-")
+	if "\u2013" in text:
+		text = text.replace("\u2013", "-")
+	if "\u201c" or "\u201d" in text:
+		text = text.replace("\u201c", "\"")
+		text = text.replace("\u201d", "\"")
 	return text
 
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
