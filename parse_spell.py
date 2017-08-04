@@ -29,7 +29,8 @@ def create_spell_list():
 				   ("druid_terrainCaster.txt", "Druid's Terrain Caster Spells"),
 				   ("druid_elementalCaster.txt", "Druid's Elemental Caster Spells"),
 				   ("animalCompanionSpells.txt", "Animal Companion Spells"),
-				   ("occultist.txt", "Occultist's Spells")]
+				   ("occultist.txt", "Occultist's Spells"),
+				   ("necromancer.txt", "Necromancer's Spells")]
 
 	for list_tuple in spell_lists:
 		convert(list_tuple[0], list_tuple[1])
@@ -45,8 +46,8 @@ def convert(fileName, powerListName, targetFileName=None):
 
 	fileName = os.path.join("data", fileName)
 	print(fileName)
-	with open(fileName) as f:
-		lines = [line.rstrip('\n') for line in open(fileName)]
+	#with open(fileName, encoding="utf8") as f:
+	lines = [line.rstrip('\n') for line in open(fileName, encoding="utf8")]
 	
 	allSpells = []
 
@@ -190,8 +191,8 @@ def parse_spell(lines, powerListId):
 		
 		#Set the recharge time. It might also have been set above, since for ranged spells recharge time is written on the same row.
 		if line.startswith("Daily", 0, 5) or line.startswith("Recharge", 0, 8) \
-				or line.startswith("At-Will", 0, 7) or line.startswith("Cyclic", 0, 6)\
-				or line.startswith("Variable"):
+				or line.startswith("At-Will", 0, 7) or line.startswith("Once per battle", 0, 15)\
+				or line.startswith("Cyclic", 0, 6) or line.startswith("Variable"):
 			line = cleanUnicodeFromString(line)
 			#add requires momentum to rechargetime, in rules momentum is in its' own line but makes sense to have it here
 			#if "rechargeTime" in powerDictionary and "momentum" in powerDictionary["rechargeTime"]:
@@ -230,10 +231,26 @@ def parse_spell(lines, powerListId):
 				or line.startswith("Effect", 0, 6) or line.startswith("Cast for", 0, 8) \
 				or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11)\
 				or line.startswith("Hit vs.", 0, 7):
-			#print(line)
 			line = cleanUnicodeFromString(line)
-			if "hitDamageOrEffect" in powerDictionary:
+			#handle vampiric form a bit differently, it grants an attack that should be printed to the effect block
+			if "name" in powerDictionary and "Vampiric Form" in powerDictionary["name"]:
+				if "hitDamageOrEffect" in powerDictionary:
+					if "Attack" in line:
+						powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line.replace("Effect: ", "")
+					else:
+						powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
+				else:
+					powerDictionary["hitDamageOrEffect"] = removeMetaText(line)
+			#handle hit vs. x lines differently, those whole lines should be added, removing meta text can make text confusing
+			if "Hit vs" in line:
+				if "hitDamageOrEffect" in powerDictionary:
+					powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
+				else:
+					powerDictionary["hitDamageOrEffect"] = line
+			#check if we already have the entry in dictionary, if so just append more text to it
+			elif "hitDamageOrEffect" in powerDictionary:
 				powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
+			#otherwise create a new entry to the dictionary and add the line (without the info text, such as effect:)
 			else:
 				powerDictionary["hitDamageOrEffect"] = removeMetaText(line)
 				
@@ -385,6 +402,8 @@ def cleanUnicodeFromString(text):
 		text = text.replace("\u2019", "\'")
 	if "\u00e2\u20ac\u201d" in text:
 		text = text.replace("\u00e2\u20ac\u201d", "-")
+	if "\u2014" in text:
+		text = text.replace("\u2014", "-")
 	return text
 
 def uprint(*objects, sep=' ', end='\n', file=sys.stdout):
