@@ -215,10 +215,18 @@ def parse_spell(lines, powerListId):
 			line = cleanUnicodeFromString(line)
 			powerDictionary["attackType"] = line
 			
-		#targets, such as Target: One nearby enemy
-		if line.startswith("Target", 0, 6):
-			line = cleanUnicodeFromString(line)
-			powerDictionary["target"] = removeMetaText(line)
+		#targets, such as Target: One nearby enemy. Channel Life has "Attack Target" as the target text.
+		if line.startswith("Target", 0, 6) or line.startswith("Attack Target", 0, 13) or line.startswith("Healing Target", 0, 14):
+			#for attack target / healing target we need to add the whole line, removing the "healing target" or "attack target"
+			#text would make the spell description confusing
+			if line.startswith("Attack Target", 0, 13) or line.startswith("Healing Target", 0, 14):
+				if "target" in powerDictionary:
+					powerDictionary["target"] = powerDictionary["target"] + "\n\n" + line
+				else:
+					powerDictionary["target"] = line
+			else:
+				line = cleanUnicodeFromString(line)
+				powerDictionary["target"] = removeMetaText(line)
 
 		#handle Slick Feint from rogue, since it has to be special. Of course.
 		if line.startswith("First Target", 0, 12) or line.startswith("Second Target", 0, 13):
@@ -242,9 +250,18 @@ def parse_spell(lines, powerListId):
 				or line.startswith("Opening & Sustained", 0, 19) or line.startswith("Final Verse", 0, 11)\
 				or line.startswith("Hit vs.", 0, 7):
 			line = cleanUnicodeFromString(line)
+			print("\n\n" + "###########\n" + line + "\n\n")
+			
+			#handle "hit vs. ally/enemy/staggered target/xxx" and "natural even/odd" lines differently,
+			#those whole lines should be added, removing text before the : symbol makes the text confusing
+			if "Hit vs" in line or line.startswith("Natural Even Hit:", 0, 17) or line.startswith("Natural Odd Hit:", 0, 16):
+				if "hitDamageOrEffect" in powerDictionary:
+					powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
+				else:
+					powerDictionary["hitDamageOrEffect"] = line
 			#handle "vampiric form" & "coronation" a bit differently,
 			#they grant an attack that should be printed to the effect block
-			if "name" in powerDictionary and ("Vampiric Form" or "Coronation" in powerDictionary["name"]):
+			elif "name" in powerDictionary and ("Vampiric Form" or "Coronation" in powerDictionary["name"]):
 				if "hitDamageOrEffect" in powerDictionary:
 					if "Attack" in line:
 						powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line.replace("Effect: ", "")
@@ -252,13 +269,6 @@ def parse_spell(lines, powerListId):
 						powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 				else:
 					powerDictionary["hitDamageOrEffect"] = removeMetaText(line)
-			#handle "hit vs. ally/enemy/staggered target/xxx" and "natural even/odd" lines differently,
-			#those whole lines should be added, removing text before the : symbol makes the text confusing
-			elif "Hit vs" in line or line.startswith("Natural", 0, 7):
-				if "hitDamageOrEffect" in powerDictionary:
-					powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
-				else:
-					powerDictionary["hitDamageOrEffect"] = line
 			# check if we already have the entry in dictionary, if so just append more text to it
 			elif "hitDamageOrEffect" in powerDictionary:
 				powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
@@ -269,7 +279,7 @@ def parse_spell(lines, powerListId):
 		#add higher level effects to the effect field as well
 		if line.startswith("3rd", 0, 3) or line.startswith("5th", 0, 3) or line.startswith("7th", 0, 3) or line.startswith("9th", 0, 3):
 			line = cleanUnicodeFromString(line)
-			print("\n" + line)
+			#print("\n" + line)
 			powerDictionary["hitDamageOrEffect"] = powerDictionary["hitDamageOrEffect"] + "\n\n" + line
 
 		if "Miss" in line:
